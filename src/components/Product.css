@@ -1,0 +1,69 @@
+/* Product.css */
+
+.col-sm-4 {
+    margin-top: 25px;
+    width: 30%;
+    background-color: #333;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.product-card {
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden; /* Keeps the image inside the card corners */
+    background-color: #333;
+    box-shadow: 5px 5px 10px black, 10px 10px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+    background-color: #333;
+}
+
+.product-card-img {
+    width: 100%;
+    height: 180px;
+}
+
+.card-body.custom-card-body {
+    padding: 20px;
+}
+
+.product-card-title {
+    font-size: 1.5em;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007BFF;
+}
+
+.product-card-text {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.btn.btn-primary {
+    background-color: #f4f4f4;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn.btn-primary i.fas.fa-cart-plus {
+    margin-right: 5px; /* Spaces out the cart icon from the text */
+}

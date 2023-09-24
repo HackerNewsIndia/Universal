@@ -1,0 +1,35 @@
+/* Testimonials.css */
+
+.container {
+    margin-top: 30px;
+}
+
+.testimonial-card {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f4f4f4;
+    height: 150px;
+    margin-bottom: 20px; /* In case you want to add more testimonials in a column layout */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px); /* Slight upward motion */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); /* Increased shadow depth */
+}
+
+.testimonial-card-title {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.testimonial-card-text {
+    font-style: italic;
+    color: #555;
+}
