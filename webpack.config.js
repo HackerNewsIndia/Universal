@@ -45,6 +45,7 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {
         counter: "diaryblogadminui@http://localhost:3032/remoteEntry.js",
+        DiaryBlogSpace: "diaryblogadminui@http://localhost:3032/remoteEntry.js",
       },
       exposes: {},
       shared: {
