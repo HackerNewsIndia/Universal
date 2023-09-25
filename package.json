@@ -32,6 +32,25 @@
   "dependencies": {
     "@babel/runtime": "^7.13.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "@ant-design/icons": "^5.2.5",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.5",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.8.3",
+    "axios": "^1.4.0",
+    "font-awesome": "^4.7.0",
+    "jwt-decode": "^3.1.2",
+    "react-markdown": "^8.0.7",
+    "react-scripts": "5.0.1",
+    "rmwc": "^8.0.8",
+    "web-vitals": "^2.1.4"
   }
 }

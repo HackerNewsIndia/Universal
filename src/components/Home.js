@@ -1,7 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Product from "./Products";
 import Testimonials from "./Testimonials";
 import "./Home.css";
+
+const Counter = React.lazy(() => import("counter/Counter"));
 
 const Home = () => {
   const products = [
@@ -40,6 +42,11 @@ const Home = () => {
   return (
     <div className="home_div">
       {/* <h2>Welcome to Universe </h2> */}
+
+      <Suspense fallback={"loading..."}>
+        <Counter />
+      </Suspense>
+
       <p className="home_para">Web Components that just works !</p>
       <div className="home_container">
         <div className="home_row">

@@ -1,0 +1,87 @@
+/* Container card styling */
+.post-card {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 80%;
+    /* margin-top: 20px;
+    margin-left: 98px; */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden; 
+    background-color: #fff;
+    margin-bottom: 2rem;  /* Space between cards */
+    /* box-shadow: 5px 5px 10px black, 10px 10px 15px rgba(0,0,0,0.3); */
+    box-shadow: 0px 0px 10px black, 0px 0px 15px rgba(0,0,0,0.3);
+
+
+}
+
+.post-card:hover {
+    box-shadow: 0px 0px 10px black, 0px 0px 15px rgba(0,0,0,0.3);
+
+}
+
+.post-back{
+    margin-top: 5px;
+    margin-left: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.post-back:hover{
+    background-color: transparent;
+}
+
+/* Image container */
+.post-img-container {
+    width: 100%;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+/* Styling for the image */
+.card-img {
+    width: 100%;
+    max-height: 500px;
+    /* display: block; */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover .card-img {
+    transform: scale(1.05);
+}
+
+/* Content container */
+.post-content-container {
+    padding: 20px;
+}
+
+/* Styling the card title */
+.post-card-title {
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600; 
+}
+
+/* Styling the card content text */
+.post-card-text {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .post-content-container {
+        padding: 15px;
+    }
+}

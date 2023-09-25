@@ -2,10 +2,13 @@
 import React from "react";
 // import { mockProducts } from "./data/MockProducts";
 import "./Product.css";
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
+  const navigate = useNavigate();
 
   const handleClick = () => {
+    navigate("/diaryblogSpace");
   };
 
   return (

@@ -1,0 +1,32 @@
+/* Dashboard.css */
+
+/* Main dashboard container */
+.dashboard_div {
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Assuming you'd use the commented-out elements in the future: */
+/*
+h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+*/
+

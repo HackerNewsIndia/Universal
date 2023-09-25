@@ -1,0 +1,77 @@
+/* Register.css */
+
+/* Main container */
+.register_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    background-color: #f4f4f4;
+}
+
+/* Form styling */
+.register_form {
+    background-color: #3a3636;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.register_input {
+    width: 100%;
+    padding: 10px 15px;
+    /* margin-bottom: 15px; */
+    margin-top: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.register_label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.register_checkbox{
+    margin-right: 10px;
+}
+
+.register_button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: grey; /* A green shade for register button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.register_button:hover {
+    background-color: darkgray; /* A darker shade for hover state */
+}
+
+.login_link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login_link:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 0px !important;
+  }
+  

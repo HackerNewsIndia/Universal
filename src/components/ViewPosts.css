@@ -1,0 +1,313 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+.parent-container {
+    display: flex;
+    justify-content: center; /* For horizontal centering */
+    align-items: center;    /* For vertical centering */
+    height: 100vh; /* Using viewport height to take up the whole height of the viewable screen. Adjust this value if needed. */
+    flex-direction: column;
+}
+
+.blog-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+.blog-followers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+}
+
+
+/* Input field styling */
+.search-input {
+    padding: 10px 15px;
+    border: 2px #333;
+    border-radius: 4px;
+    border-color: 2px #333;
+    box-sizing: border-box; /* to include padding and border in the element's total width and height */
+    display: flex;
+    align-items: center !important ;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.search-input:hover {
+    border: 2px black;
+}
+
+.search-group{
+    display: flex;
+    gap: 10px; 
+    margin: 20px;
+    margin-top: 0px;
+    margin-left: 50px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF; /* Choose your preferred color */
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #0056b3; 
+    }
+}
+
+
+
+/* Card styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 20px; /* Adjust the gap to your preference */
+    margin: 40px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+
+.card {
+    flex-basis: calc(25% - 10px); /* -10px (or some value) to account for any margin/padding */
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    height: 300px; /* or any desired fixed height */
+    overflow: hidden;
+    /* width: 100%; */
+    box-shadow: 5px 5px 10px black, 10px 10px 15px rgba(0,0,0,0.3);
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 10px black, 10px 10px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.card-img-top {
+    width: 100% !important;
+    height: 150px;
+    object-fit: cover;
+}
+
+.post-body {
+    padding: 15px;
+}
+
+.post-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1.25px solid #000000;
+    
+}
+
+.post-text {
+    /* white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-width: 80%;  */
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.post-views{
+    float: left;
+}
+
+
+.col-sm-3 {
+    flex: 0 0 calc(25% - 20px); /* This means it will take up roughly 20% of the parent container width, minus the 20px gap we defined. */
+    max-width: calc(25% - 20px);
+}
+
+/* For responsiveness */
+/* @media (max-width: 768px) {
+    .col-sm-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} */
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* This will stack children vertically */
+    align-items: center; /* This will center children horizontally */
+}
+
+.category-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding: 20px; */
+}
+
+.chip{
+    display: inline-block;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.6);
+    line-height: 32px;
+    padding: 0 12px;
+    border-radius: 16px;
+    background-color: #e4e4e4;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.chip:hover{
+    background-color: #a2a2a2;
+}
+
+.back-button-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-list{
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.list-head-container{
+    padding: 30px;
+    box-shadow: 5px 5px 10px black, 10px 10px 15px rgba(0,0,0,0.3);
+}
+
+.list-container {
+    width: 100%; /* Adjust the width based on your preference */
+    margin: 20px auto; /* auto will center the UL horizontally */
+    padding: 0; /* Reset the default padding */
+    list-style-type: none; /* Remove bullet points */
+
+    /* Optional box shadow to lift the list container off the background for a slightly modern look */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Optional, to make the edges slightly rounded */
+    overflow: hidden; /* This works with border-radius to ensure child elements don't overflow the rounded corners */
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5; /* Optional for list divider */
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    /* background-color: #5b5b5b; */
+    border-radius: 5px;
+    height: 80px;
+    
+}
+
+.list-item + .list-item {
+    border-top: 1px solid #e5e5e5; /* Border between list items */
+}
+
+.list-content {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.post-title-list {
+    margin-top: 0;
+    margin-bottom: 1px;
+    font-size: 1.25rem;
+    color: #333;
+    /* padding-bottom: 10px; */
+    border-bottom: 0.1px solid #c7c6c6;
+}
+
+.title-text{
+    margin-bottom: 0px;
+}
+
+.list-image {
+    width: 60px; /* Adjust based on preference */
+    height: 60px; /* Adjust based on preference */
+    object-fit: cover; /* This ensures that the image remains in correct aspect ratio */
+    border-radius: 5px; /* Optional for rounded edges */
+}
+
+.post-text-company-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-text-list{
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+.post-company-list {
+    color: #555; /* Slight gray for subtle appearance */
+    float: right;
+    margin-bottom: 0px;
+}
+
+.material-icons {
+    color: #555;
+    font-size: 24px;
+}
+
+.card-view{
+    border: none;
+    background-color: transparent;
+
+}
+
+.list-view{
+    border: none;
+    background-color: transparent;
+}
+
+.card-view:hover, .list-view:hover{
+    background-color: transparent;
+}
+
+.follow-btn-post{
+    padding: 2px 5px;
+    margin-left: 15px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: #333;  /* Green color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}

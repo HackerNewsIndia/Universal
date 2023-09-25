@@ -1,0 +1,65 @@
+.companyPosts-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.companyPosts_selectedStory_h1 {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.companyPosts_selectedStory_p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.companyPosts_selectedStory_button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.companyPosts_selectedStory_button:hover {
+    background-color: #0056b3;
+}
+
+/* For the table layout */
+
+
+/* For CreateNewPost related styles */
+/* .create-post-container {
+    margin: 20px 0;
+}
+
+.create-post-title, .create-post-content {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.create-post-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-button:hover {
+    background-color: #1e7e34;
+} */

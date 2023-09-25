@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:3000/",
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    port: 8080,
+    port: 3000,
     historyApiFallback: true,
   },
 
@@ -44,7 +44,7 @@ module.exports = (_, argv) => ({
       name: "Universal",
       filename: "remoteEntry.js",
       remotes: {
-        counter: "diaryblogadminui@http://localhost:8082/remoteEntry.js",
+        counter: "diaryblogadminui@http://localhost:3032/remoteEntry.js",
       },
       exposes: {},
       shared: {
