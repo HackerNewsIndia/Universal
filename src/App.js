@@ -5,7 +5,7 @@ import Navigation from "./components/Navigation";
 
 import "./App.css";
 
-import ReactDOM from "react-dom"; 
+import ReactDOM from "react-dom";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Moved useState inside the component
@@ -21,4 +21,12 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("app"));
+const renderApp = () => {
+  ReactDOM.render(<App />, document.getElementById("app"));
+};
+
+renderApp();
+
+if (module.hot) {
+  module.hot.accept("./App", renderApp);
+}
