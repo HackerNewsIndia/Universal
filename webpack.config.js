@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const webpack = require("webpack");
 
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
@@ -14,6 +15,10 @@ module.exports = (_, argv) => ({
   devServer: {
     port: 3000,
     historyApiFallback: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+    hot: true,
   },
 
   module: {
@@ -58,10 +63,15 @@ module.exports = (_, argv) => ({
           singleton: true,
           requiredVersion: deps["react-dom"],
         },
+        "@fortawesome/free-solid-svg-icons": {
+          singleton: true,
+          requiredVersion: deps["@fortawesome/free-solid-svg-icons"],
+        },
       },
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 });
