@@ -51,6 +51,7 @@ module.exports = (_, argv) => ({
       remotes: {
         counter: "diaryblogadminui@http://localhost:3032/remoteEntry.js",
         DiaryBlogSpace: "diaryblogadminui@http://localhost:3032/remoteEntry.js",
+        FollowSpace: "followadminui@http://localhost:3034/remoteEntry.js",
       },
       exposes: {},
       shared: {

@@ -13,6 +13,7 @@ import { HelpOutline } from "@mui/icons-material";
 const DiaryBlogSpace = React.lazy(() =>
   import("DiaryBlogSpace/DiaryBlogSpace")
 );
+const FollowSpace = React.lazy(() => import("FollowSpace/FollowSpace"));
 
 const Dashboard = ({ onLogout, user, isLoggedIn }) => {
   const navigate = useNavigate();
@@ -49,6 +50,9 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
               <Menu.Item key="typeltAdmin" icon={<MessageOutlined />}>
                 Typelt Admin
               </Menu.Item>
+              <Menu.Item key="followAdmin" icon={<MessageOutlined />}>
+                Follow Admin
+              </Menu.Item>
               <Menu.Item key="help" icon={<HelpOutline />}>
                 Ask Admin
               </Menu.Item>
@@ -70,6 +74,11 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
         <div className="diaryblog">
           <Suspense fallback={"loading..."}>
             <DiaryBlogSpace
+              isLoggedIn={isLoggedIn}
+              setIsLoggedIn={onLogout}
+              selectedKey={selectedKey}
+            />
+            <FollowSpace
               isLoggedIn={isLoggedIn}
               setIsLoggedIn={onLogout}
               selectedKey={selectedKey}
