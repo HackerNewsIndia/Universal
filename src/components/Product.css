@@ -3,7 +3,7 @@
 .col-sm-4 {
     margin-top: 25px;
     width: 30%;
-    background-color: #333;
+    /* background-color: #333; */
     border-radius: 15px;
     display: flex;
     flex-direction: row;
