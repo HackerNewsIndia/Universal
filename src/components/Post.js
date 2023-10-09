@@ -12,7 +12,9 @@ const Post = () => {
   useEffect(() => {
     // Fetch the post details here using the companyName and postId
     console.log("Company:", blogSpaceId, "PostId:", postId);
-    fetch(`http://127.0.0.1:5001/api/companies/${blogSpaceId}/posts/${postId}`)
+    fetch(
+      `https://diaryblogapi.onrender.com/api/companies/${blogSpaceId}/posts/${postId}`
+    )
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch post details");

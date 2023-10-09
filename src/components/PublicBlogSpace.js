@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./PublicBlogSpace.css"; // Importing the CSS
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 const PublicBlogSpace = () => {
   const [blogSpace, setBlogSpace] = useState([]);
@@ -14,7 +16,7 @@ const PublicBlogSpace = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5001/api/diaryblog_space")
+    fetch("https://diaryblogapi.onrender.com/api/diaryblog_space")
       .then((response) => response.json())
       .then(async (data) => {
         setBlogSpace(data);
@@ -23,7 +25,7 @@ const PublicBlogSpace = () => {
         const counts = {};
         const promises = data.map(async (bspace) => {
           const response = await fetch(
-            `http://127.0.0.1:5001/api/blogSpace/${bspace._id.$oid}/followers`
+            `https://diaryblogapi.onrender.com/api/blogSpace/${bspace._id.$oid}/followers`
           );
           const followersData = await response.json();
           if (response.ok) {
@@ -67,6 +69,22 @@ const PublicBlogSpace = () => {
     const blogId = companyData._id.$oid;
     console.log("Navigating with ID:", companyData.name, blogId);
     navigate(`/diaryblog/${companyData.name}/${blogId}`);
+    fetch(`https://diaryblogapi.onrender.com/api/${blogId}/views`, {
+      method: "PUT",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        updatedBlogSpace = blogSpace.map((blogSpaceItem) => {
+          if (blogSpaceItem._id === blogId) {
+            blogSpaceItem.views === data.views;
+          }
+          return blogSpaceItem;
+        });
+        setBlogSpace(updatedBlogSpace);
+      })
+      .catch((error) => {
+        console.error("Error incrementing views:", error);
+      });
   };
 
   const toggleFollow = (companyName) => {
@@ -89,7 +107,7 @@ const PublicBlogSpace = () => {
 
     const blogId = companyData._id.$oid;
 
-    fetch(`http://127.0.0.1:5001/api/blogSpace/${blogId}/follow`, {
+    fetch(`https://diaryblogapi.onrender.com/api/blogSpace/${blogId}/follow`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -179,6 +197,9 @@ const PublicBlogSpace = () => {
                   </div>
                   <p className="follower_count">
                     Followers: {followersCounts[companyData._id.$oid] || 0}
+                  </p>
+                  <p className="post-views">
+                    <FontAwesomeIcon icon={faEye} />: {companyData.views}
                   </p>
                 </div>
               </div>

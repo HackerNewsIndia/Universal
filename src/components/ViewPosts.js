@@ -21,7 +21,9 @@ const ViewPosts = () => {
 
   useEffect(() => {
     if (blogspace_id && blogspace_id !== "undefined") {
-      fetch(`http://127.0.0.1:5001/api/blogspace/${blogspace_id}/posts`)
+      fetch(
+        `https://diaryblogapi.onrender.com/api/blogspace/${blogspace_id}/posts`
+      )
         .then((response) => response.json())
         .then((data) => {
           setPosts(data);
@@ -29,7 +31,9 @@ const ViewPosts = () => {
         .catch((error) => console.error("Error fetching posts:", error));
 
       // Fetch follower count for the current blogSpace
-      fetch(`http://127.0.0.1:5001/api/blogSpace/${blogspace_id}/followers`)
+      fetch(
+        `https://diaryblogapi.onrender.com/api/blogSpace/${blogspace_id}/followers`
+      )
         .then((response) => response.json())
         .then((followersData) => {
           setFollowersCount(followersData.userEmails?.length || 0);
@@ -90,9 +94,12 @@ const ViewPosts = () => {
   const handlePostClick = (blogspace_name, blogSpaceId, postId) => {
     navigate(`/company/${blogspace_name}/${blogSpaceId}/post/${postId}`);
 
-    fetch(`http://127.0.0.1:5001/api/posts/${blogspace_name}/${postId}/views`, {
-      method: "PUT",
-    })
+    fetch(
+      `https://diaryblogapi.onrender.com/api/posts/${blogspace_name}/${postId}/views`,
+      {
+        method: "PUT",
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         // Update the view count locally for the post that was clicked.
@@ -121,13 +128,16 @@ const ViewPosts = () => {
   };
 
   const handleConfirmFollow = () => {
-    fetch(`http://127.0.0.1:5001/api/blogSpace/${blogspace_id}/follow`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email: emailForFollow }),
-    })
+    fetch(
+      `https://diaryblogapi.onrender.com/api/blogSpace/${blogspace_id}/follow`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: emailForFollow }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         if (data.message) {

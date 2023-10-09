@@ -38,9 +38,10 @@ function Login({ onLogin, setUser }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("button clicked");
     try {
       const res = await axios.post(
-        "http://127.0.0.1:5000/api/login",
+        "https://usermgtapi.onrender.com/api/login",
         credentials
       );
       console.log(res.data);
