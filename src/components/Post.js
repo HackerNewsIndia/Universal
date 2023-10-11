@@ -13,7 +13,7 @@ const Post = () => {
     // Fetch the post details here using the companyName and postId
     console.log("Company:", blogSpaceId, "PostId:", postId);
     fetch(
-      `https://diaryblogapi.onrender.com/api/companies/${blogSpaceId}/posts/${postId}`
+      `https://diaryblogapi2.onrender.com/api/companies/${blogSpaceId}/posts/${postId}`
     )
       .then((response) => {
         if (!response.ok) {

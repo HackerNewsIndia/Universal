@@ -41,7 +41,7 @@ function Login({ onLogin, setUser }) {
     console.log("button clicked");
     try {
       const res = await axios.post(
-        "https://usermgtapi.onrender.com/api/login",
+        "https://usermgtapi3.onrender.com/api/login",
         credentials
       );
       console.log(res.data);

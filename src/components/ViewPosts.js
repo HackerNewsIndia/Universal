@@ -22,7 +22,7 @@ const ViewPosts = () => {
   useEffect(() => {
     if (blogspace_id && blogspace_id !== "undefined") {
       fetch(
-        `https://diaryblogapi.onrender.com/api/blogspace/${blogspace_id}/posts`
+        `https://diaryblogapi2.onrender.com/api/blogspace/${blogspace_id}/posts`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -32,7 +32,7 @@ const ViewPosts = () => {
 
       // Fetch follower count for the current blogSpace
       fetch(
-        `https://diaryblogapi.onrender.com/api/blogSpace/${blogspace_id}/followers`
+        `https://diaryblogapi2.onrender.com/api/blogSpace/${blogspace_id}/followers`
       )
         .then((response) => response.json())
         .then((followersData) => {
@@ -95,7 +95,7 @@ const ViewPosts = () => {
     navigate(`/company/${blogspace_name}/${blogSpaceId}/post/${postId}`);
 
     fetch(
-      `https://diaryblogapi.onrender.com/api/posts/${blogspace_name}/${postId}/views`,
+      `https://diaryblogapi2.onrender.com/api/posts/${blogspace_name}/${postId}/views`,
       {
         method: "PUT",
       }
@@ -129,7 +129,7 @@ const ViewPosts = () => {
 
   const handleConfirmFollow = () => {
     fetch(
-      `https://diaryblogapi.onrender.com/api/blogSpace/${blogspace_id}/follow`,
+      `https://diaryblogapi2.onrender.com/api/blogSpace/${blogspace_id}/follow`,
       {
         method: "POST",
         headers: {

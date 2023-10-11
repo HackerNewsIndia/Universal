@@ -52,7 +52,10 @@ function Register({ onRegister, setUser: setGlobalUser }) {
     }
 
     try {
-      const res = await axios.post("https://usermgtapi.onrender.com/api/register", user);
+      const res = await axios.post(
+        "https://usermgtapi3.onrender.com/api/register",
+        user
+      );
       console.log(res.data);
 
       if (res.data.token) {
