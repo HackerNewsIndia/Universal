@@ -30,9 +30,10 @@
 
 .post-back{
     margin-top: 5px;
-    margin-left: 5px;
+    margin-right: 900px;
+    margin-left: 30px;
     border: none;
-    background-color: transparent;
+    background-color: rgba(100, 85, 85, 0.788);
 }
 
 .post-back:hover{
