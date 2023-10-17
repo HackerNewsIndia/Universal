@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Post.css";
+import TextToSpeech from './TextToSpeech'; // Import the TextToSpeech component
 
 const Post = () => {
   const { blogSpaceId, postId } = useParams();
@@ -55,6 +56,7 @@ const Post = () => {
         <p className="post-card-text">
           <ReactMarkdown>{post.description}</ReactMarkdown>
         </p>
+        <TextToSpeech text={post.description} /> {/* Add text-to-speech for post description */}
       </div>
     </div>
   );
