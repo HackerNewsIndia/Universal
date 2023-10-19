@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./styles.css"; // Replace "styles.css" with the path to your CSS file
-
+import "./Post.css"; // Replace "styles.css" with the path to your CSS file
 
 const TextToSpeech = ({ text }) => {
   const [isPaused, setIsPaused] = useState(false);
@@ -11,7 +10,7 @@ const TextToSpeech = ({ text }) => {
 
   useEffect(() => {
     const synth = window.speechSynthesis;
-    
+
     const handleVoicesChanged = () => {
       const voices = synth.getVoices();
       console.log(voices); // Log available voices for debugging
@@ -67,10 +66,15 @@ const TextToSpeech = ({ text }) => {
 
   return (
     <div>
-           
-      <button onClick={handlePlay}>{isPaused ? "Resume" : "Play"}</button>
-      <button onClick={handlePause}>Pause</button>
-      <button onClick={handleStop}>Stop</button>
+      <button className="play-button" onClick={handlePlay}>
+        {isPaused ? "Resume" : "Play"}
+      </button>
+      <button className="pause-button" onClick={handlePause}>
+        Pause
+      </button>
+      <button className="stop-button" onClick={handleStop}>
+        Stop
+      </button>
     </div>
   );
 };
