@@ -10,10 +10,12 @@ import {
 } from "@mui/icons-material";
 import { SettingOutlined, LogoutOutlined } from "@ant-design/icons";
 import { HelpOutline } from "@mui/icons-material";
+
 const DiaryBlogSpace = React.lazy(() =>
   import("DiaryBlogSpace/DiaryBlogSpace")
 );
 const FollowSpace = React.lazy(() => import("FollowSpace/FollowSpace"));
+// const TypeitSpace = React.lazy(() => import("TypeitSpace/TypeitSpace"));
 
 const Dashboard = ({ onLogout, user, isLoggedIn }) => {
   const navigate = useNavigate();
@@ -47,7 +49,7 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
               <Menu.Item key="diaryBlogAdmin" icon={<StarOutlined />}>
                 DiaryBlog Admin
               </Menu.Item>
-              <Menu.Item key="typeltAdmin" icon={<MessageOutlined />}>
+              <Menu.Item key="typeitAdmin" icon={<MessageOutlined />}>
                 Typelt Admin
               </Menu.Item>
               <Menu.Item key="followAdmin" icon={<MessageOutlined />}>
@@ -83,6 +85,11 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
               setIsLoggedIn={onLogout}
               selectedKey={selectedKey}
             />
+            {/* <TypeitSpace
+              isLoggedIn={isLoggedIn}
+              setIsLoggedIn={onLogout}
+              selectedKey={selectedKey}
+            /> */}
           </Suspense>
         </div>
       </div>
