@@ -86,3 +86,35 @@
         padding: 15px;
     }
 }
+
+
+/* post.css */
+.play-button, .pause-button, .stop-button {
+    margin: 5px; /* Add some spacing between buttons */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .play-button {
+    background-color: #4CAF50; /* Green background for the Play button */
+    color: white; /* White text color */
+  }
+  
+  .pause-button {
+    background-color: #f57f17; /* Orange background for the Pause button */
+    color: white; /* White text color */
+  }
+  
+  .stop-button {
+    background-color: #f44336; /* Red background for the Stop button */
+    color: white; /* White text color */
+  }
+  
+  /* Style on hover for all buttons */
+  .play-button:hover, .pause-button:hover, .stop-button:hover {
+    opacity: 0.9;
+  }
+  

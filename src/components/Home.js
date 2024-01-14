@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import Product from "./Products";
 import Testimonials from "./Testimonials";
-import "./Home.css";
+import "./home.css";
 
 const Counter = React.lazy(() => import("counter/Counter"));
 
