@@ -59,7 +59,20 @@ function Login({ onLogin, setUser }) {
         // onLogin(userRes.data);
         onLogin();
 
-        navigate("/dashboard");
+        const urlParams = new URLSearchParams(window.location.search);
+        const redirectUrl = urlParams.get("redirectUrl");
+        if (redirectUrl) {
+          const finalRedirectUrl = `${redirectUrl}?token=${encodeURIComponent(
+            res.data.token
+          )}`;
+          window.location.href = finalRedirectUrl;
+        } else {
+          navigate("/dashboard");
+        }
+        // console.log(redirectUrl);
+
+        // // Redirect the user to the stored URL or the dashboard
+        // window.location.href = redirectUrl;
       } else {
         alert(res.data.message);
       }
