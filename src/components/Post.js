@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Post.css";
-import TextToSpeech from './TextToSpeech'; // Import the TextToSpeech component
+import TextToSpeech from "./TextToSpeech"; // Import the TextToSpeech component
 
 const Post = () => {
   const { blogSpaceId, postId } = useParams();
@@ -39,6 +39,22 @@ const Post = () => {
     return <div>Loading...</div>;
   }
 
+  const stripMarkdown = (md) => {
+    // Remove headers
+    let content = md.replace(/#+\s+/g, "");
+    //Remove separation line
+    content = content.replace(/---/g, "");
+    // Remove images
+    content = content.replace(/\!\[.*\]\(.*\)/g, "");
+    // Remove inline links
+    content = content.replace(/\[.*\]\(.*\)/g, "");
+    // Remove bold, italics, etc.
+    content = content.replace(/(\*\*|__)?\*.*\*\*(\*\*|__)?/g, "");
+    // Remove any other markdown symbols you want
+
+    return content;
+  };
+
   return (
     <div className="post-card mb-3">
       <div className="post-img-container">
@@ -56,7 +72,7 @@ const Post = () => {
         <p className="post-card-text">
           <ReactMarkdown>{post.description}</ReactMarkdown>
         </p>
-        <TextToSpeech text={post.description} /> {/* Add text-to-speech for post description */}
+        <TextToSpeech text={stripMarkdown(post.description)} />
       </div>
     </div>
   );
