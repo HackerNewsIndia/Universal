@@ -36,9 +36,9 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                 <Link className="register_link" to="/register">
                   <i className="fas fa-user-plus"></i> Register
                 </Link>
-                <Link className="view_post_link" to="/diaryblog">
+                {/* <Link className="view_post_link" to="/diaryblog">
                   <i className="fas fa-edit"></i> View Posts
-                </Link>
+                </Link> */}
               </>
             )}
 
