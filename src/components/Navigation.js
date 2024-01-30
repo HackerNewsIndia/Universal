@@ -70,17 +70,19 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                 >
                   Universe
                 </a>
+                <Link
+            to="/product"  // Specify the path to your products.js file
+            className={`text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium ${
+              pathname === '/product' ? 'bg-gray-900' : ''
+            }`}
+          >
+            Product
+          </Link>
                 <a
                   href="#"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
                 >
-                  Product
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
-                >
-                   Pricing
+                  Pricing
                 </a>
               </div>
             </div>
