@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import "./Registration.css";
 
 function Register({ onRegister, setUser: setGlobalUser }) {
   const [user, setUser] = useState({
@@ -64,11 +63,6 @@ function Register({ onRegister, setUser: setGlobalUser }) {
           "Authorization"
         ] = `Bearer ${localStorage.getItem("token")}`;
 
-        // const userRes = await axios.get("http://127.0.0.1:5000/api/user", {
-        //   headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        // });
-
-        // onRegister(userRes.data);
         onRegister();
 
         navigate("/dashboard");
@@ -81,83 +75,93 @@ function Register({ onRegister, setUser: setGlobalUser }) {
   };
 
   return (
-    <div className="register_div">
-      <form className="register_form" onSubmit={handleSubmit}>
+    <div className="container mx-auto p-4 flex items-center justify-center min-h-screen">
+      <form className="bg-white rounded-lg shadow-md p-8 max-w-md w-full" onSubmit={handleSubmit}>
         <input
-          className="register_input"
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           name="username"
-          placeholder="username"
+          placeholder="Username"
           onChange={handleChange}
         />
-        {errors.name && <p className="error">{errors.username}</p>}
+        {errors.username && <p className="text-red-500 text-xs italic">{errors.username}</p>}
+        
         <input
-          className="register_input"
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 leading-tight focus:outline-none focus:shadow-outline"
           type="email"
           name="email"
           placeholder="Email"
           onChange={handleChange}
         />
-        {errors.email && <p className="error">{errors.email}</p>}
+        {errors.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
+        
         <input
-          className="register_input"
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 leading-tight focus:outline-none focus:shadow-outline"
           type="password"
           name="password"
           placeholder="Password"
           onChange={handleChange}
         />
-        {errors.password && <p className="error">{errors.password}</p>}
+        {errors.password && <p className="text-red-500 text-xs italic">{errors.password}</p>}
+        
         <input
-          className="register_input"
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 leading-tight focus:outline-none focus:shadow-outline"
           type="password"
           name="confirmPassword"
           placeholder="Confirm Password"
           onChange={handleChange}
         />
-        {errors.confirmPassword && (
-          <p className="error">{errors.confirmPassword}</p>
-        )}
+        {errors.confirmPassword && <p className="text-red-500 text-xs italic">{errors.confirmPassword}</p>}
+        
         <input
-          className="register_input"
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           name="profession"
           placeholder="Profession"
           onChange={handleChange}
         />
+        
         <input
-          className="register_input"
+          className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           name="license"
           placeholder="License"
           onChange={handleChange}
         />
-        <label className="register_label">
+        
+        <label className="block text-gray-700 text-sm font-bold mb-2">
           <input
-            className="register_checkbox"
+            className="mr-2 leading-tight"
             type="checkbox"
             name="diaryblogAccess"
             checked={user.diaryblogAccess}
             onChange={handleCheckboxChange}
           />
-          Diary Blog Access
+          <span className="text-sm">Diary Blog Access</span>
         </label>
-        <label className="register_label">
+        
+        <label className="block text-gray-700 text-sm font-bold mb-2">
           <input
-            className="register_checkbox"
+            className="mr-2 leading-tight"
             type="checkbox"
             name="typeitAccess"
             checked={user.typeitAccess}
             onChange={handleCheckboxChange}
           />
-          Type It Access
+          <span className="text-sm">Type It Access</span>
         </label>
-        <button className="register_button" type="submit">
+        
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
           Register
         </button>
-        <Link className="login_link" to="/login">
+        <Link className="block text-center mt-2 text-blue-500 hover:text-blue-800" to="/login">
           Already have an account? Login
         </Link>
       </form>
+      
     </div>
   );
 }
