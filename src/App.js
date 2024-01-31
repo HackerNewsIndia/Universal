@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import AuthRoutes from "./components/AuthRoutes";
 import Navigation from "./components/Navigation";
+import Product from './components/Product';
 
 import "./App.css";
 
@@ -16,6 +17,7 @@ const App = () => {
       <Router>
         <Navigation isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <AuthRoutes isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       </Router>
     </div>
   );
