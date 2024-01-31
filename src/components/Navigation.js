@@ -65,14 +65,14 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="bg-gray-900 text-white rounded-md px-3 py-2 text-md font-medium"
+                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
                   aria-current="page"
                 >
                   Universe
                 </a>
                 <Link
             to="/product"  // Specify the path to your products.js file
-            className={`text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium ${
+            className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium ${
               pathname === '/product' ? 'bg-gray-900' : ''
             }`}
           >
@@ -80,7 +80,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
           </Link>
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
+                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
                 >
                   Pricing
                 </a>
@@ -90,7 +90,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
   <Link
     to="/login" // Specify the path to your login.js file
-    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
+    className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
     onClick={() => setIsMobileMenuOpen(false)} // Close the mobile menu when the login button is clicked
   >
     Login
