@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "./Products";
+import Product from "./Product";
 import Testimonials from "./Testimonials";
 //import "./home.css"; // If you have additional custom styles
 
