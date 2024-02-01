@@ -6,17 +6,27 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
   const navigate = useNavigate();
   const { pathname } = location;
 
-  // Add state and toggle function
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedMobileMenuItem, setSelectedMobileMenuItem] = useState(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleMobileMenuLinkClick = (menuItem) => {
+    setIsMobileMenuOpen(false);
+    setSelectedMobileMenuItem(menuItem);
   };
 
   const logout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
     navigate('/');
+  };
+
+  const handleProductClick = () => {
+    navigate('/product');
+    handleMobileMenuLinkClick('Product');
   };
 
   console.log('Is user logged in:', isLoggedIn);
@@ -65,32 +75,33 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
+                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
                   aria-current="page"
                 >
                   Universe
                 </a>
-                <Link
-            to="/product"  // Specify the path to your products.js file
-            className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium ${
-              pathname === '/product' ? 'bg-gray-900' : ''
-            }`}
-          >
-            Product
-          </Link>
                 <a
                   href="#"
-                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
+                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
+                  onClick={handleProductClick}
                 >
-                  Pricing
+                  Product
                 </a>
+          <Link
+            to="/PricingSection" // Specify the path to your pricing.js file
+            className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold ${
+              pathname === '/PricingSection' ? 'bg-gray-900' : ''
+            }`}
+          >
+            Pricing
+          </Link>
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
   <Link
     to="/login" // Specify the path to your login.js file
-    className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
+    className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
     onClick={() => setIsMobileMenuOpen(false)} // Close the mobile menu when the login button is clicked
   >
     Login
@@ -139,13 +150,33 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
       </div>
       <div className={`sm:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <div className="space-y-1 px-2 pb-3 pt-2">
-          <a
-            href="#"
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-            aria-current="page"
-          >
-            Dashboard
-          </a>
+        <a
+                href="#"
+                className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+                  selectedMobileMenuItem === null ? 'bg-gray-900 text-white' : ''
+                }`}
+                onClick={() => handleMobileMenuLinkClick(null)}
+              >
+                Dashboard
+              </a>
+              <a
+                href="#"
+                className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+                  selectedMobileMenuItem === 'Product' ? 'bg-gray-900 text-white' : ''
+                }`}
+                onClick={() => handleMobileMenuLinkClick('Product')}
+              >
+                Product
+              </a>
+              <Link
+                to="/PricingSection"
+                className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+                  selectedMobileMenuItem === 'Pricing' ? 'bg-gray-900 text-white' : ''
+                }`}
+                onClick={() => handleMobileMenuLinkClick('Pricing')}
+              >
+                Pricing
+              </Link>
           <a
             href="#"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
