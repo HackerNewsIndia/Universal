@@ -1,23 +1,25 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import ReactDOM from "react-dom";  // Add this line to import ReactDOM
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AuthRoutes from "./components/AuthRoutes";
 import Navigation from "./components/Navigation";
 import Product from "./components/Product";
-
 import "./App.css";
 
-import ReactDOM from "react-dom";
-
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Moved useState inside the component
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className="app_div">
-      {/* <h1>UNIVERSE</h1> */}
       <Router>
         <Navigation isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <AuthRoutes isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-        <Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <Routes>
+          <Route
+            path="/product"
+            element={<Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
+          />
+        </Routes>
       </Router>
     </div>
   );
