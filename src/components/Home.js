@@ -136,22 +136,22 @@ const Home = () => {
           <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 dark:divide-gray-700">
             {/* Similar structure for the details elements */}
             <details>
-				<summary class="py-2 outline-none cursor-pointer focus:underline">Optio maiores eligendi molestiae totam dolores similique?</summary>
+				<summary class="py-2 outline-none cursor-pointer focus:underline">What is this platform about?</summary>
 				<div class="px-4 pb-4">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde neque in fugiat magni, quas animi enim veritatis deleniti ex. Impedit.</p>
+					<p>Our platform enables you to effortlessly create a personalized digital presence through features like DiaryBlog, Ask, My Thoughts, TypeIt, and Follow. These components cater to various forms of self-expression, content creation, and community engagement.</p>
 				</div>
 			</details>
 			<details>
-				<summary class="py-2 outline-none cursor-pointer focus:underline">Modi dolorem veritatis culpa quos consequuntur beatae itaque excepturi perspiciatis?</summary>
+				<summary class="py-2 outline-none cursor-pointer focus:underline">How does DiaryBlog work?</summary>
 				<div class="px-4 pb-4">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aspernatur quae, eos explicabo odit minima libero veniam similique quibusdam doloribus facilis ipsa accusantium vel maiores corrupti! Libero voluptate a doloribus?</p>
+					<p>DiaryBlog is designed for writing and publishing articles or posts online, allowing you to share your thoughts, opinions, and expertise on diverse topics. It provides a space to engage with your audience or community.</p>
 				</div>
 			</details>
 			<details>
-				<summary class="py-2 outline-none cursor-pointer focus:underline">Magni reprehenderit possimus debitis?</summary>
+				<summary class="py-2 outline-none cursor-pointer focus:underline">What does My Thoughts entail?</summary>
 				<div class="px-4 pb-4 space-y-2">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptates aspernatur dolores in consequatur doloremque inventore reprehenderit, consequuntur perspiciatis architecto.</p>
-					<p>Sed consectetur quod tenetur! Voluptatibus culpa incidunt veritatis velit quasi cupiditate unde eaque! Iure, voluptatibus autem eaque unde possimus quae.</p>
+					<p>My Thoughts is a feature for documenting personal experiences, thoughts, and emotions. You can choose to share these reflections publicly or keep them private. It serves as a space for self-expression and personal growth.</p>
+					
 				</div>
 			</details>
           </div>
