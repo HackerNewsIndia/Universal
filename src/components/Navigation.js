@@ -11,7 +11,17 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+ switch (menuItem) {
+      case 'Product':
+        navigate('/product');
+        break;
+      case 'Pricing':
+        navigate('/pricing');
+        break;
+      default:
+        // Handle other menu items if needed
+        break;
+    } };
 
   const handleMobileMenuLinkClick = (menuItem) => {
     setIsMobileMenuOpen(false);
