@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AuthRoutes from "./components/AuthRoutes";
 import Navigation from "./components/Navigation";
 import Product from "./components/Product";
+import Pricing from "./components/Pricing";
 import "./App.css";
 
 const App = () => {
@@ -18,6 +19,10 @@ const App = () => {
           <Route
             path="/product"
             element={<Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
+          />
+           <Route
+            path="/pricing"
+            element={<Pricing isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
           />
         </Routes>
       </Router>
