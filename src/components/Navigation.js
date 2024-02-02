@@ -29,6 +29,12 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
     handleMobileMenuLinkClick('Product');
   };
 
+  const handlePricingClick = () => {
+    setIsMobileMenuOpen(false);
+    setSelectedMobileMenuItem('Pricing');
+    navigate('/pricing'); // Assuming your pricing page path is '/pricing'
+  };
+
   console.log('Is user logged in:', isLoggedIn);
 
   return (
@@ -83,18 +89,20 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                 <a
                   href="#"
                   className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
-                  onClick={handleProductClick}
+                  onClick={handleProductClick} 
                 >
                   Product
                 </a>
-          <Link
-            to="/PricingSection" // Specify the path to your pricing.js file
-            className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold ${
-              pathname === '/PricingSection' ? 'bg-gray-900' : ''
-            }`}
-          >
+          <a
+             href="#"
+                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
+                  onClick={() => {
+                    navigate('/pricing');
+                    handleMobileMenuLinkClick('Pricing');
+                  }}
+                >
             Pricing
-          </Link>
+          </a>
               </div>
             </div>
           </div>
@@ -168,15 +176,15 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
               >
                 Product
               </a>
-              <Link
-                to="/PricingSection"
+              <a
+                href="#"
                 className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
                   selectedMobileMenuItem === 'Pricing' ? 'bg-gray-900 text-white' : ''
                 }`}
                 onClick={() => handleMobileMenuLinkClick('Pricing')}
               >
                 Pricing
-              </Link>
+              </a>
           <a
             href="#"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
