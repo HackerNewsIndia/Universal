@@ -1,7 +1,7 @@
 import React from "react";
 import Product from "./Product";
-import Pricing from "./Pricing";
 import Testimonials from "./Testimonials";
+import Pricing from "./Pricing";
 //import "./home.css"; // If you have additional custom styles
 
 const Home = () => {
@@ -129,7 +129,28 @@ const Home = () => {
 		
         </div>
       </section>
-
+      <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">2.7K</h2>
+        <p class="leading-relaxed">Users</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">1.8K</h2>
+        <p class="leading-relaxed">Followers</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">350</h2>
+        <p class="leading-relaxed">Blog Space</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">4K</h2>
+        <p class="leading-relaxed">Blog Post</p>
+      </div>
+    </div>
+  </div>
+</section>
       <section className="dark:bg-gray-800 dark:text-gray-100">
         <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
           <p className="p-2 text-md font-medium tracking text-center uppercase">How it works</p>
@@ -143,7 +164,7 @@ const Home = () => {
 				</div>
 			</details>
 			<details>
-				<summary class="py-2 outline-none cursor-pointer focus:underline">How does DiaryBlog work?</summary>
+				<summary class="py-2 outline-none cursor-pointer focus:underline"> How does DiaryBlog work?</summary>
 				<div class="px-4 pb-4">
 					<p>DiaryBlog is designed for writing and publishing articles or posts online, allowing you to share your thoughts, opinions, and expertise on diverse topics. It provides a space to engage with your audience or community.</p>
 				</div>
@@ -151,7 +172,8 @@ const Home = () => {
 			<details>
 				<summary class="py-2 outline-none cursor-pointer focus:underline">What does My Thoughts entail?</summary>
 				<div class="px-4 pb-4 space-y-2">
-					<p>My Thoughts is a feature for documenting personal experiences, thoughts, and emotions. You can choose to share these reflections publicly or keep them private. It serves as a space for self-expression and personal growth.</p>
+					<p>My Thoughts is a feature for documenting personal experiences, thoughts, and emotions. You can choose to share these reflections publicly or keep them private. It serves as a space for self-expression and personal growth.
+</p>
 					
 				</div>
 			</details>
