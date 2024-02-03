@@ -35,6 +35,12 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
     navigate('/pricing'); // Assuming your pricing page path is '/pricing'
   };
 
+  const handleUniverseClick = () => {
+    navigate('/'); // Assuming your home page path is '/'
+    handleMobileMenuLinkClick(null);
+  };
+  
+
   console.log('Is user logged in:', isLoggedIn);
 
   return (
@@ -79,13 +85,15 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
-                  aria-current="page"
-                >
-                  Universe
-                </a>
+              <a
+      href="#"
+      className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold ${
+        pathname === '/' ? 'bg-gray-900 text-white' : ''
+      }`}
+      onClick={handleUniverseClick}
+    >
+      Universe
+    </a>
                 <a
                   href="#"
                   className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
