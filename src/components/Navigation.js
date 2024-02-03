@@ -27,12 +27,13 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
   const handleProductClick = () => {
     navigate('/product');
     handleMobileMenuLinkClick('Product');
+    setIsMobileMenuOpen(false); // Close the mobile menu after navigating
   };
 
   const handlePricingClick = () => {
-    setIsMobileMenuOpen(false);
-    setSelectedMobileMenuItem('Pricing');
-    navigate('/pricing'); // Assuming your pricing page path is '/pricing'
+    navigate('/pricing');
+    handleMobileMenuLinkClick('Pricing');
+    setIsMobileMenuOpen(false); // Close the mobile menu after navigating
   };
 
   const handleUniverseClick = () => {
