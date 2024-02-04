@@ -149,15 +149,15 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
               >
                 Product
               </a>
-              <a
-                href="#"
-                className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-                  selectedMobileMenuItem === 'Pricing' ? 'bg-gray-900 text-white' : ''
-                }`}
-                onClick={() => handleMobileMenuLinkClick('Pricing')}
-              >
-                Pricing
-              </a>
+              <Link
+  to="/pricing"
+  className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+    selectedMobileMenuItem === 'Pricing' ? 'bg-gray-900 text-white' : ''
+  }`}
+  onClick={() => handleMobileMenuLinkClick('Pricing')}
+>
+  Pricing
+</Link>
           <a
             href="#"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
