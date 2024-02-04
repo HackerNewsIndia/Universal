@@ -140,15 +140,15 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
               >
                 Dashboard
               </a>
-              <a
-                href="#"
+              <Link
+                to="/product"
                 className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
                   selectedMobileMenuItem === 'Product' ? 'bg-gray-900 text-white' : ''
                 }`}
                 onClick={() => handleMobileMenuLinkClick('Product')}
               >
                 Product
-              </a>
+              </Link>
               <Link
   to="/pricing"
   className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
