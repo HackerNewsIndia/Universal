@@ -5,6 +5,8 @@ import AuthRoutes from "./components/AuthRoutes";
 import Navigation from "./components/Navigation";
 import Product from "./components/Product";
 import Pricing from "./components/Pricing";
+import Faq from "./components/Faq";
+
 import "./App.css";
 
 const App = () => {
@@ -24,6 +26,11 @@ const App = () => {
             path="/pricing"
             element={<Pricing isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
           />
+          <Route
+            path="/faq"
+            element={<Faq isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
+          />
+         
         </Routes>
       </Router>
     </div>
