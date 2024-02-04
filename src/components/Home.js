@@ -153,35 +153,7 @@ const Home = () => {
     </div>
   </div>
 </section>
-      <section className="dark:bg-gray-800 dark:text-gray-100">
-        <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
-          <p className="p-2 text-md font-medium tracking text-center uppercase">How it works</p>
-          <h2 className="mb-12 text-4xl font-bold leadi text-center sm:text-5xl">Frequently Asked Questions</h2>
-          <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 dark:divide-gray-700">
-            {/* Similar structure for the details elements */}
-            <details>
-				<summary class="py-2 outline-none cursor-pointer focus:underline">What is this platform about?</summary>
-				<div class="px-4 pb-4">
-					<p>Our platform enables you to effortlessly create a personalized digital presence through features like DiaryBlog, Ask, My Thoughts, TypeIt, and Follow. These components cater to various forms of self-expression, content creation, and community engagement.</p>
-				</div>
-			</details>
-			<details>
-				<summary class="py-2 outline-none cursor-pointer focus:underline"> How does DiaryBlog work?</summary>
-				<div class="px-4 pb-4">
-					<p>DiaryBlog is designed for writing and publishing articles or posts online, allowing you to share your thoughts, opinions, and expertise on diverse topics. It provides a space to engage with your audience or community.</p>
-				</div>
-			</details>
-			<details>
-				<summary class="py-2 outline-none cursor-pointer focus:underline">What does My Thoughts entail?</summary>
-				<div class="px-4 pb-4 space-y-2">
-					<p>My Thoughts is a feature for documenting personal experiences, thoughts, and emotions. You can choose to share these reflections publicly or keep them private. It serves as a space for self-expression and personal growth.
-</p>
-					
-				</div>
-			</details>
-          </div>
-        </div>
-      </section>
+      
 
       <footer className="border-t border-gray-200">
         <div className="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto lg:justify-between">
