@@ -109,7 +109,7 @@ const Pricing = () => {
 				<div class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900">
 					<div class="space-y-2">
 						<h4 class="text-2xl font-bold">Enterprise:</h4>
-						<span class="text-6xl font-bold">Features:
+						<span class="text-2xl font-bold">Features:
 						</span>
 					</div>
 					<p class="leadi dark:text-gray-400">All features included in the Pro plan.
