@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";  // Add this line to import ReactDOM
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ReactDOM from "react-dom"; // Add this line to import ReactDOM
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import AuthRoutes from "./components/AuthRoutes";
 import Navigation from "./components/Navigation";
 import Product from "./components/Product";
@@ -20,17 +20,22 @@ const App = () => {
         <Routes>
           <Route
             path="/product"
-            element={<Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
+            element={
+              <Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            }
           />
-           <Route
+          <Route
             path="/pricing"
-            element={<Pricing isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
+            element={
+              <Pricing isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            }
           />
           <Route
             path="/faq"
-            element={<Faq isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
+            element={
+              <Faq isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            }
           />
-         
         </Routes>
       </Router>
     </div>
