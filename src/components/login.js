@@ -73,7 +73,7 @@ function Login({ onLogin }) {
 
   return (
     <div className="flex min-h-full items-center justify-center px-6 py-12 lg:px-8">
-    <div className="bg-white rounded-lg shadow-md p-8 max-w-md w-full">
+    <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
       
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
