@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Product from "./Product";
 import Testimonials from "./Testimonials";
 import Pricing from "./Pricing";
+import Faq from "./Faq";
 //import "./home.css"; // If you have additional custom styles
 
 const Home = () => {
