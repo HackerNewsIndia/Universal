@@ -1,4 +1,0 @@
-redirects:
-  - source: https://universe-nextjs.onrender.com/:slug+
-    destination: /login?redirectUrl=https://universe-nextjs.onrender.com/:slug+
-    type: 301
