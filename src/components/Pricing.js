@@ -15,112 +15,143 @@ const Pricing = () => {
 			<div class="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
 				<div class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900">
 					<div class="space-y-2">
-						<h4 class="text-2xl font-bold">Beginner</h4>
-						<span class="text-6xl font-bold">Free</span>
+						<h4 class="text-2xl font-bold">Basic (Free):</h4>
+						<span class="text-2xl font-bold">Features:</span>
 					</div>
-					<p class="mt-3 leadi dark:text-gray-400">Etiam ac convallis enim, eget euismod dolor.</p>
+					<p class="mt-3 leadi dark:text-gray-400">Access to DiaryBlog, Ask, My Thoughts, TypeIt, and Follow components.</p>
 					<ul class="flex-1 mb-6 dark:text-gray-400">
 						<li class="flex mb-2 space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Aenean quis</span>
+							<span>Limited customization options.
+</span>
 						</li>
 						<li class="flex mb-2 space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Morbi semper</span>
+							<span>Up to 1 Blogs space, 100  Blog  or Polls, or Journals.
+</span>
 						</li>
 						<li class="flex mb-2 space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Tristique enim nec</span>
+							<span>Community support.
+</span>
+						</li>
+						
+						<li class="flex mb-2 space-x-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>Standard support resources.
+
+</span>
 						</li>
 					</ul>
-					<button type="button" class="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Get Started</button>
+					<button type="button" class="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Price: Free</button>
 				</div>
 			</div>
 			<div class="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
 				<div class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-violet-400 dark:text-gray-900">
 					<div class="space-y-2">
 						<h4 class="text-2xl font-bold">Pro</h4>
-						<span class="text-6xl font-bold">$24
-							<span class="text-sm tracki">/month</span>
+						<span class="text-2xl font-bold">Features:
+							
 						</span>
 					</div>
-					<p class="leadi">Morbi cursus ut sapien sit amet consectetur.</p>
+					<p class="leadi">Full access to DiaryBlog, Ask, My Thoughts, TypeIt, and Follow components.
+</p>
 					<ul class="flex-1 space-y-2">
 						<li class="flex items-center space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Everything in Free</span>
+							<span>Advanced customization options to match personal or brand style.
+</span>
 						</li>
 						<li class="flex items-center space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Phasellus tellus</span>
+							<span>Priority support with faster response times.
+</span>
 						</li>
 						<li class="flex items-center space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Praesent faucibus</span>
+							<span>Integration with third-party tools for enhanced functionality.
+</span>
 						</li>
 						<li class="flex items-center space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Aenean et lectus blandit</span>
+							<span>Analytics and insights to track engagement and performance.
+</span>
+						</li>
+						<li class="flex items-center space-x-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							<span>Access to premium resources and tutorials for self-improvement.
+
+</span>
 						</li>
 					</ul>
-					<button type="button" class="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Get Started</button>				</div>
+					<button type="button" class="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Price: $9.99/month
+</button>				</div>
 			</div>
 			<div class="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
 				<div class="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900">
 					<div class="space-y-2">
-						<h4 class="text-2xl font-bold">Team</h4>
-						<span class="text-6xl font-bold">$72
-							<span class="text-sm tracki">/month</span>
+						<h4 class="text-2xl font-bold">Enterprise:</h4>
+						<span class="text-6xl font-bold">Features:
 						</span>
 					</div>
-					<p class="leadi dark:text-gray-400">Phasellus ultrices bibendum nibh in vehicula.</p>
+					<p class="leadi dark:text-gray-400">All features included in the Pro plan.
+</p>
 					<ul class="space-y-2 dark:text-gray-400">
 						<li class="flex items-start space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Everything in Pro</span>
+							<span>Dedicated account manager for personalized support and guidance.
+</span>
 						</li>
 						<li class="flex items-start space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Fusce sem ligula</span>
+							<span>Custom development options for tailored solutions.
+</span>
 						</li>
 						<li class="flex items-start space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Curabitur dictum</span>
+							<span>Enterprise-level security and compliance features.
+</span>
 						</li>
 						<li class="flex items-start space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Duis odio eros</span>
+							<span>Collaboration tools for team-based content creation and management.
+</span>
 						</li>
 						<li class="flex items-start space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Vivamus ut lectus ex</span>
+							<span>API access for seamless integration with existing systems.
+</span>
 						</li>
 					</ul>
-					<button type="button" class="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Get Started</button>				</div>
+					<button type="button" class="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Price: Custom Quote (Based on Requirements)</button>				</div>
 			</div>
           </div>
         </div>
