@@ -168,6 +168,15 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
 >
   Pricing
 </Link>
+               <Link
+  to="/faq"
+  className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+    selectedMobileMenuItem === 'Faq' ? 'bg-gray-900 text-white' : ''
+  }`}
+  onClick={() => handleMobileMenuLinkClick('Faq')}
+>
+  FAQ
+</Link>
           <a
             href="#"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
