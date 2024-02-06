@@ -69,7 +69,7 @@ function Register({ onRegister, setUser: setGlobalUser }) {
   };
 
   return (
-    <div className="container mx-auto p-4 flex items-center justify-center min-h-screen">
+    <div className="flex min-h-full items-center justify-center px-6 py-12 lg:px-8">
       <form
         className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full"
         onSubmit={handleSubmit}
