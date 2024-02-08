@@ -95,15 +95,15 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
     >
       Universe
     </a>
-                <a
-                  href="#"
+                <Link
+                  to="/Product"
                   className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
                   onClick={handleProductClick} 
                 >
                   Product
-                </a>
-          <a
-             href="#"
+                </Link>
+          <Link
+             to="/Pricing"
                   className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
                   onClick={() => {
                     navigate('/pricing');
@@ -111,7 +111,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                   }}
                 >
             Pricing
-          </a>
+          </Link>
                     <Link
                 to="/faq" // Specify the path to your FAQ page
                 className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold`}
