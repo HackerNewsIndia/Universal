@@ -29,7 +29,7 @@ const User = () => {
 
     try {
       // Send a POST request to add a new user
-      await axios.post('https://diaryblogapi2.onrender.com/api/users', {
+      await axios.post('https://usermgtapi3.onrender.com/api/users', {
         name: newUserName,
         linkedin: newUserLinkedIn,
         twitter: newUserTwitter,
@@ -41,8 +41,10 @@ const User = () => {
       setNewUserLinkedIn('');
       setNewUserTwitter('');
       setNewUserGitHub('');
+      alert('User saved successfully!');
     } catch (error) {
       console.error('Error adding new user:', error);
+      alert('Error adding new user. Please try again.');
     }
   };
 
