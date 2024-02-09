@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom"; // Add this line to import ReactDOM
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AuthRoutes from "./components/AuthRoutes";
 import Navigation from "./components/Navigation";
 import Product from "./components/Product";
 import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
+import Dashboard from './components/Dashboard';  // Import the Dashboard component
+import User from './components/User';  // Import the User component
 
 import "./App.css";
 
@@ -19,22 +21,24 @@ const App = () => {
         <AuthRoutes isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <Routes>
           <Route
+            path="/dashboard"
+            element={<Dashboard isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
+          />
+          <Route
+            path="/user"
+            element={<User isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
+          />
+          <Route
             path="/product"
-            element={
-              <Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-            }
+            element={<Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
           />
           <Route
             path="/pricing"
-            element={
-              <Pricing isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-            }
+            element={<Pricing isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
           />
           <Route
             path="/faq"
-            element={
-              <Faq isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-            }
+            element={<Faq isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
           />
         </Routes>
       </Router>
