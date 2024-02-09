@@ -35,6 +35,12 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
     // Add any additional logout logic you may need.
   };
 
+  const goToUserPage = () => {
+    // Navigate to the user page
+    navigate("/user");
+  };
+
+
   return (
     isLoggedIn && (
       <div className="dashboard_div">
@@ -58,9 +64,10 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
               <Menu.Item key="help" icon={<HelpOutline />}>
                 Ask Admin
               </Menu.Item>
-              <Menu.Item key="settings" icon={<SettingOutlined />}>
-                Settings
+              <Menu.Item key="settings" icon={<SettingOutlined />} onClick={goToUserPage}>
+                User
               </Menu.Item>
+           
               {isLoggedIn && ( // Conditionally render the Logout button
                 <Menu.Item
                   key="logout"
