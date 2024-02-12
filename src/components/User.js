@@ -36,7 +36,7 @@ const ImageUploader = ({ onImageUpload }) => {
         className="hidden"
       />
       <div
-        className="h-40 w-40 border-2 border-dashed border-black"
+        className="h-60 w-60 border-2 border-dashed border-black"
         onClick={() => imageUploader.current.click()}
       >
         <img
