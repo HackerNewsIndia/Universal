@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import jwt_decode from "jwt-decode";
+
 
 const ImageUploader = ({ onImageUpload }) => {
   const uploadedImage = React.useRef(null);
