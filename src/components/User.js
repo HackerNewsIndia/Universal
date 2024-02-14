@@ -101,7 +101,7 @@ const User = () => {
         linkedin: newUserLinkedIn,
         twitter: newUserTwitter,
         github: newUserGitHub,
-        image: newUserImage,
+        image_base64: newUserImage,
       };
 
       const response = await axios.post(
@@ -121,7 +121,7 @@ const User = () => {
       setNewUserLinkedIn("");
       setNewUserTwitter("");
       setNewUserGitHub("");
-      setNewUserImage(null);
+      setNewUserImage("");
       alert("User saved successfully!");
     } catch (error) {
       console.error("Error adding new user:", error);
