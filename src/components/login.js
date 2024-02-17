@@ -47,6 +47,8 @@ function Login({ onLogin }) {
         credentials
       );
 
+      console.log("Response:", res); // Log the response object for debugging
+
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
         axios.defaults.headers.common[
@@ -55,21 +57,30 @@ function Login({ onLogin }) {
 
         onLogin();
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const redirectUrl = urlParams.get("redirectUrl");
+        const currentUrl = window.location.href;
+        // const hashIndex = currentUrl.indexOf("#");
+        // const urlWithoutHash =
+        //   hashIndex !== -1 ? currentUrl.substring(0, hashIndex) : currentUrl;
+        // !const urlWithoutHash = currentUrl.replace("#/", "");
+        // console.log(urlWithoutHash);
+        // const urlParams = new URLSearchParams(urlWithoutHash);
+        // const redirectUrl = decodeURIComponent(urlParams.get("redirectUrl"));
+        // console.log(redirectUrl);
 
-        if (redirectUrl) {
-          const finalRedirectUrl = `${redirectUrl}?token=${encodeURIComponent(
-            res.data.token
-          )}`;
-          window.location.href = finalRedirectUrl;
-        } else {
-          navigate("/dashboard");
-        }
+        // if (redirectUrl) {
+        //   // const redirectUrl = urlParams.get("redirectUrl");
+        //   const finalRedirectUrl = `${redirectUrl}?token=${encodeURIComponent(
+        //     res.data.token
+        //   )}`;
+        //   window.location.href = finalRedirectUrl;
+        // } else {
+        navigate("/dashboard");
+        // }
       } else {
         alert(res.data.message);
       }
     } catch (err) {
+      console.error("Error:", err); // Log the error object for debugging
       alert(err.response.data.message);
     } finally {
       setLoading(false);
@@ -196,4 +207,3 @@ function Login({ onLogin }) {
 }
 
 export default Login;
-
