@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import jwt_decode from "jwt-decode";
+
 
 const ImageUploader = ({ onImageUpload }) => {
   const uploadedImage = React.useRef(null);
@@ -36,7 +38,7 @@ const ImageUploader = ({ onImageUpload }) => {
         className="hidden"
       />
       <div
-        className="h-40 w-40 border-2 border-dashed border-black"
+        className="h-60 w-60 border-2 border-dashed border-black"
         onClick={() => imageUploader.current.click()}
       >
         <img
@@ -99,7 +101,7 @@ const User = () => {
         linkedin: newUserLinkedIn,
         twitter: newUserTwitter,
         github: newUserGitHub,
-        image: newUserImage,
+        image_base64: newUserImage,
       };
 
       const response = await axios.post(
@@ -119,7 +121,7 @@ const User = () => {
       setNewUserLinkedIn("");
       setNewUserTwitter("");
       setNewUserGitHub("");
-      setNewUserImage(null);
+      setNewUserImage("");
       alert("User saved successfully!");
     } catch (error) {
       console.error("Error adding new user:", error);
