@@ -35,10 +35,10 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
     // Add any additional logout logic you may need.
   };
 
-  const goToUserPage = () => {
+  //const goToUserPage = () => {
     // Navigate to the user page
-    navigate("/user");
-  };
+//    navigate("/user");
+  //};
 
 
   return (
@@ -64,7 +64,7 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
               <Menu.Item key="help" icon={<HelpOutline />}>
                 Ask Admin
               </Menu.Item>
-              <Menu.Item key="settings" icon={<SettingOutlined />} onClick={goToUserPage}>
+              <Menu.Item key="user" icon={<SettingOutlined />}> 
                 User
               </Menu.Item>
            
