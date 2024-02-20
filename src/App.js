@@ -7,7 +7,6 @@ import Product from "./components/Product";
 import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
 import Dashboard from './components/Dashboard';  // Import the Dashboard component
-import User from './components/User';  // Import the User component
 
 import "./App.css";
 
@@ -24,10 +23,7 @@ const App = () => {
             path="/dashboard"
             element={<Dashboard isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
           />
-          <Route
-            path="/user"
-            element={<User isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
-          />
+          
           <Route
             path="/product"
             element={<Product isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
