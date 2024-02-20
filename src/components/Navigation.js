@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation({ isLoggedIn, setIsLoggedIn }) {
   const location = useLocation();
@@ -19,30 +21,29 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     setIsLoggedIn(false);
-    navigate('/');
+    navigate("/");
   };
 
   const handleProductClick = () => {
-    navigate('/product');
-    handleMobileMenuLinkClick('Product');
+    navigate("/product");
+    handleMobileMenuLinkClick("Product");
     setIsMobileMenuOpen(false); // Close the mobile menu after navigating
   };
 
   const handlePricingClick = () => {
-    navigate('/pricing');
-    handleMobileMenuLinkClick('Pricing');
+    navigate("/pricing");
+    handleMobileMenuLinkClick("Pricing");
     setIsMobileMenuOpen(false); // Close the mobile menu after navigating
   };
 
   const handleUniverseClick = () => {
-    navigate('/'); // Assuming your home page path is '/'
+    navigate("/"); // Assuming your home page path is '/'
     handleMobileMenuLinkClick(null);
   };
-  
 
-  console.log('Is user logged in:', isLoggedIn);
+  console.log("Is user logged in:", isLoggedIn);
 
   return (
     <nav className="bg-blue-800">
@@ -59,127 +60,150 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
               <span className="absolute -inset-0.5"></span>
               <span className="sr-only">Open main menu</span>
               <svg
-                className={`block h-6 w-6 ${isMobileMenuOpen ? 'hidden' : 'block'}`}
+                className={`block h-6 w-6 ${
+                  isMobileMenuOpen ? "hidden" : "block"
+                }`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
               </svg>
               <svg
-                className={`hidden h-6 w-6 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
+                className={`hidden h-6 w-6 ${
+                  isMobileMenuOpen ? "block" : "hidden"
+                }`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-             
-            </div>
+            <div className="flex flex-shrink-0 items-center"></div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-              <a
-      href="#"
-      className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold ${
-        pathname === '/' ? 'bg-gray-700 text-white' : ''
-      }`}
-      onClick={handleUniverseClick}
-    >
-      Universe
-    </a>
+                <a
+                  href="#"
+                  className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold ${
+                    pathname === "/" ? "bg-gray-700 text-white" : ""
+                  }`}
+                  onClick={handleUniverseClick}
+                >
+                  Universe
+                </a>
                 <Link
                   to="/Product"
                   className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
-                  onClick={handleProductClick} 
+                  onClick={handleProductClick}
                 >
                   Product
                 </Link>
-          <Link
-             to="/Pricing"
+                <Link
+                  to="/Pricing"
                   className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
                   onClick={() => {
-                    navigate('/pricing');
-                    handleMobileMenuLinkClick('Pricing');
+                    navigate("/pricing");
+                    handleMobileMenuLinkClick("Pricing");
                   }}
                 >
-            Pricing
-          </Link>
-                    <Link
-                to="/faq" // Specify the path to your FAQ page
-                className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold`}
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  handleMobileMenuLinkClick('FAQ');
-                }}
-              >
-                FAQ
-              </Link> 
+                  Pricing
+                </Link>
+                <Link
+                  to="/faq" // Specify the path to your FAQ page
+                  className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold`}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    handleMobileMenuLinkClick("FAQ");
+                  }}
+                >
+                  FAQ
+                </Link>
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-  <Link
-    to="/login" // Specify the path to your login.js file
-    className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
-    onClick={() => setIsMobileMenuOpen(false)} // Close the mobile menu when the login button is clicked
-  >
-    Login
-  </Link>
-  
-         
-           
+            {isLoggedIn ? (
+              <button
+                className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  logout();
+                }} // Close the mobile menu when the login button is clicked
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                to="/login" // Specify the path to your login.js file
+                className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
+                onClick={() => setIsMobileMenuOpen(false)} // Close the mobile menu when the login button is clicked
+              >
+                Login <FontAwesomeIcon icon={faArrowRightToBracket} />
+              </Link>
+            )}
           </div>
         </div>
       </div>
-      <div className={`sm:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
+      <div
+        className={`sm:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}
+        id="mobile-menu"
+      >
         <div className="space-y-1 px-2 pb-3 pt-2">
-        <a
-                href="#"
-                className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-                  selectedMobileMenuItem === null ? 'bg-gray-900 text-white' : ''
-                }`}
-                onClick={() => handleMobileMenuLinkClick(null)}
-              >
-                Dashboard
-              </a>
-              <Link
-                to="/product"
-                className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-                  selectedMobileMenuItem === 'Product' ? 'bg-gray-900 text-white' : ''
-                }`}
-                onClick={() => handleMobileMenuLinkClick('Product')}
-              >
-                Product
-              </Link>
-              <Link
-  to="/pricing"
-  className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-    selectedMobileMenuItem === 'Pricing' ? 'bg-gray-900 text-white' : ''
-  }`}
-  onClick={() => handleMobileMenuLinkClick('Pricing')}
->
-  Pricing
-</Link>
-               <Link
-  to="/faq"
-  className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-    selectedMobileMenuItem === 'Faq' ? 'bg-gray-900 text-white' : ''
-  }`}
-  onClick={() => handleMobileMenuLinkClick('Faq')}
->
-  FAQ
-</Link>
-          
-          
-          
+          <a
+            href="#"
+            className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+              selectedMobileMenuItem === null ? "bg-gray-900 text-white" : ""
+            }`}
+            onClick={() => handleMobileMenuLinkClick(null)}
+          >
+            Dashboard
+          </a>
+          <Link
+            to="/product"
+            className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+              selectedMobileMenuItem === "Product"
+                ? "bg-gray-900 text-white"
+                : ""
+            }`}
+            onClick={() => handleMobileMenuLinkClick("Product")}
+          >
+            Product
+          </Link>
+          <Link
+            to="/pricing"
+            className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+              selectedMobileMenuItem === "Pricing"
+                ? "bg-gray-900 text-white"
+                : ""
+            }`}
+            onClick={() => handleMobileMenuLinkClick("Pricing")}
+          >
+            Pricing
+          </Link>
+          <Link
+            to="/faq"
+            className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+              selectedMobileMenuItem === "Faq" ? "bg-gray-900 text-white" : ""
+            }`}
+            onClick={() => handleMobileMenuLinkClick("Faq")}
+          >
+            FAQ
+          </Link>
         </div>
       </div>
     </nav>
