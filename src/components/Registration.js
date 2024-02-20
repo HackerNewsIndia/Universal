@@ -72,8 +72,8 @@ function Register({ onRegister, setUser: setGlobalUser }) {
       const token = localStorage.getItem("token");
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       const res = await axios.post(
-        // "https://usermgtapi3.onrender.com/api/verify-email",
-        "http://127.0.0.1:5000/verify-email",
+        "https://usermgtapi3.onrender.com/api/verify-email",
+        // "http://127.0.0.1:5000/verify-email",
         { email: user.email, code: verificationCode }
       );
 
