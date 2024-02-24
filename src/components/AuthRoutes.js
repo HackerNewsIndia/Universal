@@ -44,31 +44,6 @@ const AuthRoutes = ({ isLoggedIn, setIsLoggedIn }) => {
         path="/register"
         element={<Register onRegister={() => setIsLoggedIn(true)} />}
       />
-      {/* {isLoggedIn && (
-        <Route
-          path="/dashboard"
-          element={
-            <Dashboard onLogout={logout} user={user} isLoggedIn={isLoggedIn} />
-          }
-        />
-      )} */}
-      <Route
-        path="/dashboard"
-        element={
-          <Dashboard onLogout={logout} user={user} isLoggedIn={isLoggedIn} />
-        }
-      />
-      <Route path="/diaryblogSpace" element={<PublicBlogSpace />} />
-      <Route
-        path="/diaryblog/:blogspace_name/:blogspace_id"
-        element={<ViewPosts />}
-      />
-
-      {/* <Route path="/post=:postId" element={<Post />} /> */}
-      <Route
-        path="/company/:blogspace_name/:blogSpaceId/post/:postId"
-        element={<Post />}
-      />
     </Routes>
   );
 };
