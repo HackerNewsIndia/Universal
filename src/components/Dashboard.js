@@ -44,61 +44,7 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
   return (
     isLoggedIn && (
       <div className="dashboard_div">
-        {/* <h2>Welcome to the Universe Dashboard</h2> */}
-        {/* <button onClick={handleClick}>Create Blog Space</button> */}
-        <div className="menu-container">
-          <div className="left-side">
-            <Menu onClick={(e) => setSelectedKey(e.key)}>
-              <Menu.Item key="home" icon={<HomeOutlined />}>
-                Dashboard
-              </Menu.Item>
-              <Menu.Item key="diaryBlogAdmin" icon={<StarOutlined />}>
-                DiaryBlog Admin
-              </Menu.Item>
-              <Menu.Item key="typeitAdmin" icon={<MessageOutlined />}>
-                Typelt Admin
-              </Menu.Item>
-              <Menu.Item key="followAdmin" icon={<MessageOutlined />}>
-                Follow Admin
-              </Menu.Item>
-              <Menu.Item key="help" icon={<HelpOutline />}>
-                Ask Admin
-              </Menu.Item>
-              <Menu.Item key="user" icon={<SettingOutlined />}> 
-                User
-              </Menu.Item>
-           
-              {isLoggedIn && ( // Conditionally render the Logout button
-                <Menu.Item
-                  key="logout"
-                  icon={<LogoutOutlined />}
-                  onClick={logout}
-                >
-                  Logout
-                </Menu.Item>
-              )}
-            </Menu>
-          </div>
-        </div>
-        <div className="diaryblog">
-          <Suspense fallback={"loading..."}>
-            <DiaryBlogSpace
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={onLogout}
-              selectedKey={selectedKey}
-            />
-            <FollowSpace
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={onLogout}
-              selectedKey={selectedKey}
-            />
-            {/* <TypeitSpace
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={onLogout}
-              selectedKey={selectedKey}
-            /> */}
-          </Suspense>
-        </div>
+        <h1>Welcome</h1>
       </div>
     )
   );
