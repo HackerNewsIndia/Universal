@@ -97,7 +97,8 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
             <div className="flex flex-shrink-0 items-center"></div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <a
+                <Link
+                  to="/dashboard"
                   href="#"
                   className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold ${
                     pathname === "/" ? "bg-gray-700 text-white" : ""
@@ -105,7 +106,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                   onClick={handleUniverseClick}
                 >
                   Universe
-                </a>
+                </Link>
                 <Link
                   to="/Product"
                   className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
