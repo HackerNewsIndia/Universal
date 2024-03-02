@@ -138,22 +138,28 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {isLoggedIn ? (
-            <a href="#" className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-              selectedMobileMenuItem === null ? "bg-gray-900 text-white" : ""
-            }`}
-            onClick={() => handleMobileMenuLinkClick(null)}
-            >
-            Dashboard
-             </a>
-              <button
-                className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  logout();
-                }} // Close the mobile menu when the login button is clicked
-              >
-                Logout
-              </button>
+              <div>
+                <a
+                  href="#"
+                  className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+                    selectedMobileMenuItem === null
+                      ? "bg-gray-900 text-white"
+                      : ""
+                  }`}
+                  onClick={() => handleMobileMenuLinkClick(null)}
+                >
+                  Dashboard
+                </a>
+                <button
+                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    logout();
+                  }} // Close the mobile menu when the login button is clicked
+                >
+                  Logout
+                </button>
+              </div>
             ) : (
               <Link
                 to="/login" // Specify the path to your login.js file
