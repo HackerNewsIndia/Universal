@@ -138,16 +138,13 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {isLoggedIn ? (
-              <Link
-                to="/dashboard" // Specify the path to your login.js file
-                className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
-                onClick={() => {
-                  setIsMobileMenuOpen(false)
-                  navigate("/dashboard");
-                  }} // Close the mobile menu when the login button is clicked
-              >
-                Dashboard <FontAwesomeIcon icon={faArrowRightToBracket} />
-              </Link>
+            <a href="#" className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+              selectedMobileMenuItem === null ? "bg-gray-900 text-white" : ""
+            }`}
+            onClick={() => handleMobileMenuLinkClick(null)}
+            >
+            Dashboard
+             </a>
               <button
                 className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
                 onClick={() => {
