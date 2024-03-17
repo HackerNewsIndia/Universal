@@ -61,8 +61,8 @@ const Product = () => {
 					</svg>
 				</div>
 				<div class="flex flex-col justify-center max-w-3xl  col-span-full lg:col-span-3 lg:text-left">
-					<span class="text-sm tracki uppercase dark:text-violet-400">Step 4 - Monitize</span>
-					<span class="text-xl font-bold md:text-2xl">Montize</span>
+					<span class="text-sm tracki uppercase dark:text-violet-400">Step 4 - Monetize</span>
+					<span class="text-xl font-bold md:text-2xl">Monetize</span>
 					<span class="mt-4 dark:text-gray-300">Keep hitting follower and viewer count to earn.</span>
 				</div>
 			</div>
