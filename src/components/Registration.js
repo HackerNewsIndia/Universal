@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import Footer from "./Footer";
 
 function Register({ onRegister, setUser: setGlobalUser }) {
   const [user, setUser] = useState({
@@ -92,6 +93,7 @@ function Register({ onRegister, setUser: setGlobalUser }) {
   };
 
   return (
+    <div>
     <div className="flex min-h-full items-center justify-center px-6 py-12 lg:px-8">
       {!verificationSent ? (
         <form
@@ -207,6 +209,8 @@ function Register({ onRegister, setUser: setGlobalUser }) {
           </button>
         </form>
       )}
+    </div>
+        <Footer/>
     </div>
   );
 }
