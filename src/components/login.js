@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "../index.css";
+import Footer from "./Footer";
 
 function Login({ onLogin }) {
   const [credentials, setCredentials] = useState({
@@ -89,6 +90,7 @@ function Login({ onLogin }) {
   };
 
   return (
+    <div>
     <div className="flex min-h-full items-center justify-center px-6 py-12 lg:px-8">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -204,6 +206,8 @@ function Login({ onLogin }) {
         </div>
       </div>
     </div>
+<Footer/>
+                </div>
   );
 }
 
