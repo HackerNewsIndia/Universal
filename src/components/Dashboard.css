@@ -1,13 +1,13 @@
 /* Dashboard.css */
 
 /* Main dashboard container */
-.dashboard_div {
+/*.dashboard_div {
     display: flex;
     flex-direction: row;
     padding: 10px;
     font-family: 'Arial', sans-serif;
     background-color: #ffffff;
-}
+}*/
 
 /* Assuming you'd use the commented-out elements in the future: */
 /*
