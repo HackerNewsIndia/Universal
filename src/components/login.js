@@ -25,7 +25,7 @@ function Login({ onLogin }) {
     setCredentials({ ...credentials, [name]: value });
 
     if (name === "email" && !isValidEmail(value)) {
-      setEmailError("Email is invalid");
+      setEmailError("Email is invalid. Please try again");
     } else {
       setEmailError("");
     }
@@ -79,11 +79,10 @@ function Login({ onLogin }) {
         navigate("/dashboard");
         // }
       } else {
-        alert(res.data.message);
+        setPasswordError("incorrect password, please try again.");
       }
     } catch (err) {
-      console.error("Error:", err); // Log the error object for debugging
-      alert(err.response.data.message);
+      setPasswordError("incorrect password, please try again.");
     } finally {
       setLoading(false);
     }
