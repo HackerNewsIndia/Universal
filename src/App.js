@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthRoutes from "./components/AuthRoutes";
 import Navigation from "./components/Navigation";
 import Product from "./components/Product";
@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div className="app_div">
-      <Router>
+       <BrowserRouter>
         <Navigation isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <AuthRoutes isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <Routes>
@@ -37,7 +37,7 @@ const App = () => {
             element={<Faq isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}
           />
         </Routes>
-      </Router>
+       </BrowserRouter>
     </div>
   );
 };
