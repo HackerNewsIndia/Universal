@@ -64,7 +64,7 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
         <div className="relative">
           {isSidebarOpen && (
             <div
-              className=" w-full bg-blue-800 text-white overflow-y-auto"
+              className="w-14 md:w-full lg:w-full  bg-blue-800 text-white overflow-y-auto"
               style={{ height: "100%" }}
             >
               <Menu
@@ -141,7 +141,14 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
         </div>
 
         {/* Right Content Area */}
-        <div className="w-full p-10 bg-white">
+        <div
+          className="w-full p-10 bg-white overflow-y-auto"
+          style={{
+            height: "100%",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
           <Suspense fallback={"loading..."}>
             <DiaryBlogSpace
               isLoggedIn={isLoggedIn}
