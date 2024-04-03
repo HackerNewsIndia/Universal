@@ -8,6 +8,8 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
   const navigate = useNavigate();
   const { pathname } = location;
 
+  const logo = "https://i.ibb.co/h91KyGn/logo.png";
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedMobileMenuItem, setSelectedMobileMenuItem] = useState(null);
 
@@ -49,6 +51,15 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
     <nav className="bg-blue-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
+          <div className="flex-shrink-0 flex items-center justify-center">
+            <img
+              className="h-8 sm:h-auto"
+              src={logo}
+              alt="Logo"
+              style={{ width: "auto", height: "4rem" }}
+            />
+          </div>
+
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               type="button"
@@ -97,8 +108,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
             <div className="flex flex-shrink-0 items-center"></div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <Link
-                  to="/"
+                <a
                   href="#"
                   className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold ${
                     pathname === "/" ? "bg-gray-700 text-white" : ""
@@ -106,7 +116,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                   onClick={handleUniverseClick}
                 >
                   Universe
-                </Link>
+                </a>
                 <Link
                   to="/Product"
                   className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
@@ -134,34 +144,20 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                 >
                   FAQ
                 </Link>
-                {isLoggedIn && (
-                <Link
-                        to="/dashboard"
-                        className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold`}
-                        onClick={() => {
-                          navigate("/dashboard");
-                          handleMobileMenuLinkClick(null);
-                        }}
-                  >
-                        Dashboard
-                  </Link>
-                )}  
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {isLoggedIn ? (
-              <div class="flex space-x-4">
-                <button
-                  className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    logout();
-                  }} // Close the mobile menu when the login button is clicked
-                >
-                  Logout
-                </button>
-              </div>
+              <button
+                className="text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  logout();
+                }} // Close the mobile menu when the login button is clicked
+              >
+                Logout
+              </button>
             ) : (
               <Link
                 to="/login" // Specify the path to your login.js file
@@ -179,15 +175,15 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
         id="mobile-menu"
       >
         <div className="space-y-1 px-2 pb-3 pt-2">
-          <Link
-              to="/"
-              className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold ${
-                    pathname === "/" ? "bg-gray-700 text-white" : ""
-                  }`}
-                  onClick={() => handleMobileMenuLinkClick(null)}
-           >
-                  Universe
-          </Link>    
+          <a
+            href="#"
+            className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
+              selectedMobileMenuItem === null ? "bg-gray-900 text-white" : ""
+            }`}
+            onClick={() => handleMobileMenuLinkClick(null)}
+          >
+            Dashboard
+          </a>
           <Link
             to="/product"
             className={`text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
@@ -219,17 +215,6 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
           >
             FAQ
           </Link>
-           { isLoggedIn && (
-           <Link
-              to="/dashboard"
-              className={`text-gray-100 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-              selectedMobileMenuItem === "Dashboard" ? "bg-gray-900 text-white" : ""
-             }`}
-             onClick={() => handleMobileMenuLinkClick("Dashboard")}
-            >
-                        Dashboard
-            </Link>
-            )}      
         </div>
       </div>
     </nav>
