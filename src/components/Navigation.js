@@ -144,6 +144,18 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                 >
                   FAQ
                 </Link>
+                     {isLoggedIn && (
+                <Link
+                        to="/dashboard"
+                        className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold`}
+                        onClick={() => {
+                          navigate("/dashboard");
+                          handleMobileMenuLinkClick(null);
+                        }}
+                  >
+                        Dashboard
+                  </Link>
+                )}  
               </div>
             </div>
           </div>
