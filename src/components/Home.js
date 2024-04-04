@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Helmet } from "react-helmet";
 import Product from "./Product";
 import Testimonials from "./Testimonials";
 import Pricing from "./Pricing";
@@ -33,48 +32,7 @@ const Home = () => {
   const chunkedProducts = chunkArray([...products], chunkSize);
 
   return (
-<>
-
-<Helmet>   
-<title>Universe</title>
-        <meta property="og:title" content="Universe" />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta
-          property="og:url"
-          content="https://universe.connectingpeopletech.com/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Universe" />
-        <meta
-          property="og:description"
-          content="Writing and publishing articles or posts online, sharing thoughts, opinions, and expertise on various topics to engage with an audience or community"
-        />
-        <meta
-          property="og:image"
-          content="https://universe.connectingpeopletech.com/logo.png"
-        />
-
-        {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" />
-        {/* <meta
-          property="twitter:domain"
-          content="universe-nextjs.onrender.com"
-        /> */}
-        <meta
-          property="twitter:url"
-          content="https://universe.connectingpeopletech.com/"
-        />
-        <meta name="twitter:title" content="Universe" />
-        <meta
-          name="twitter:description"
-          content="Our platform enables you to effortlessly create a personalized digital presence through features like DiaryBlog, Ask, My Thoughts, TypeIt, and Follow. These components cater to various forms of self-expression, content creation, and community engagement."
-        />
-        <meta
-          name="twitter:image"
-          content="https://universe.connectingpeopletech.com/logo.png"
-        />
- </Helmet>   
+   
     <div className="home_div">
       <section className="dark:bg-gray-800 dark:text-gray-100">
         <div className="container flex flex-col mx-auto lg:flex-row">
@@ -203,7 +161,7 @@ const Home = () => {
      
       <Footer/>
     </div>
- </>
+
   );
 };
 
