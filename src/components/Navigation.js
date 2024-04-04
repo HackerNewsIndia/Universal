@@ -8,7 +8,6 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
   const navigate = useNavigate();
   const { pathname } = location;
 
-  const logo = "https://i.ibb.co/h91KyGn/logo.png";
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedMobileMenuItem, setSelectedMobileMenuItem] = useState(null);
@@ -51,14 +50,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
     <nav className="bg-blue-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="flex-shrink-0 flex items-center justify-center">
-            <img
-              className="h-8 sm:h-auto"
-              src={logo}
-              alt="Logo"
-              style={{ width: "auto", height: "4rem" }}
-            />
-          </div>
+         
 
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
