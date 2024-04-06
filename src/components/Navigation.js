@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
-import logo from '../../src/logo.svg';
 
 function Navigation({ isLoggedIn, setIsLoggedIn }) {
   const location = useLocation();
@@ -98,7 +97,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
             </button>
           </div>
                      <div className="flex-shrink-0">
-  <img className="h-8" src={logo} alt="Logo" style={{ width: 'auto', height: '9rem' }} />
+  <img className="h-8" src="https://universe.connectingpeopletech.com/logo.svg" alt="Logo" style={{ width: 'auto', height: '9rem' }} />
 </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center"></div>
