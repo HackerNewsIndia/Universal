@@ -155,11 +155,14 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
               setIsLoggedIn={onLogout}
               selectedKey={selectedKey}
             />
-            <FollowSpace
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={onLogout}
-              selectedKey={selectedKey}
-            />
+           {/* {selectedKey === "followAdmin" && (
+              <FollowSpace
+                isLoggedIn={isLoggedIn}
+                setIsLoggedIn={onLogout}
+                selectedKey={selectedKey}
+              />
+            )}
+             */}
           </Suspense>
         </div>
       </div>
