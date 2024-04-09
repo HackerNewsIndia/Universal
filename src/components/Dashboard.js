@@ -25,7 +25,7 @@ import { HelpOutline } from "@mui/icons-material";
 const DiaryBlogSpace = React.lazy(() =>
   import("DiaryBlogSpace/DiaryBlogSpace")
 );
-const FollowSpace = React.lazy(() => import("FollowSpace/FollowSpace"));
+// const FollowSpace = React.lazy(() => import("FollowSpace/FollowSpace"));
 
 const Dashboard = ({ onLogout, user, isLoggedIn }) => {
   const navigate = useNavigate();
