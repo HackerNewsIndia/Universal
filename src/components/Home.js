@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
 import Product from "./Product";
 import Testimonials from "./Testimonials";
 import Pricing from "./Pricing";
@@ -33,6 +32,8 @@ const Home = () => {
   const chunkedProducts = chunkArray([...products], chunkSize);
 
   return (
+   
+	
     <div className="home_div">
       <section className="dark:bg-gray-800 dark:text-gray-100">
         <div className="container flex flex-col mx-auto lg:flex-row">
@@ -161,6 +162,7 @@ const Home = () => {
      
       <Footer/>
     </div>
+ 
   );
 };
 

@@ -3,12 +3,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
+
 function Navigation({ isLoggedIn, setIsLoggedIn }) {
   const location = useLocation();
   const navigate = useNavigate();
   const { pathname } = location;
 
-  const logo = "https://i.ibb.co/h91KyGn/logo.png";
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedMobileMenuItem, setSelectedMobileMenuItem] = useState(null);
@@ -51,14 +51,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
     <nav className="bg-blue-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="flex-shrink-0 flex items-center justify-center">
-            <img
-              className="h-8 sm:h-auto"
-              src={logo}
-              alt="Logo"
-              style={{ width: "auto", height: "4rem" }}
-            />
-          </div>
+         
 
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
@@ -104,6 +97,9 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
               </svg>
             </button>
           </div>
+                     <div className="flex-shrink-0">
+  
+</div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center"></div>
             <div className="hidden sm:ml-6 sm:block">
@@ -144,6 +140,18 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
                 >
                   FAQ
                 </Link>
+                     {isLoggedIn && (
+                <Link
+                        to="/dashboard"
+                        className={`text-gray-100 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-semibold`}
+                        onClick={() => {
+                          navigate("/dashboard");
+                          handleMobileMenuLinkClick(null);
+                        }}
+                  >
+                        Dashboard
+                  </Link>
+                )}  
               </div>
             </div>
           </div>

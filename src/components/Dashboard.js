@@ -27,7 +27,7 @@ import { HelpOutline } from "@mui/icons-material";
 const DiaryBlogSpace = React.lazy(() =>
   import("DiaryBlogSpace/DiaryBlogSpace")
 );
-const FollowSpace = React.lazy(() => import("FollowSpace/FollowSpace"));
+// const FollowSpace = React.lazy(() => import("FollowSpace/FollowSpace"));
 
 const Dashboard = ({ onLogout, user, isLoggedIn }) => {
   const navigate = useNavigate();
@@ -163,11 +163,14 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
               setIsLoggedIn={onLogout}
               selectedKey={selectedKey}
             />
-            <FollowSpace
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={onLogout}
-              selectedKey={selectedKey}
-            />
+           {/* {selectedKey === "followAdmin" && (
+              <FollowSpace
+                isLoggedIn={isLoggedIn}
+                setIsLoggedIn={onLogout}
+                selectedKey={selectedKey}
+              />
+            )}
+             */}
           </Suspense>
         </div>
       </div>

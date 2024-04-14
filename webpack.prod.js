@@ -42,8 +42,8 @@ module.exports = (_, argv) => ({
           "diaryblogadminui@https://diaryblogadminui-9lj0.onrender.com/remoteEntry.js",
         DiaryBlogSpace:
           "diaryblogadminui@https://diaryblogadminui-9lj0.onrender.com/remoteEntry.js",
-        FollowSpace:
-          "followadminui@https://followadminui.onrender.com/remoteEntry.js",
+       // FollowSpace:
+        //  "followadminui@https://followadminui.onrender.com/remoteEntry.js",
       },
       exposes: {},
       shared: {
