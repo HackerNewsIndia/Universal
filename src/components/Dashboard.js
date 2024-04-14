@@ -6,7 +6,9 @@ import {
   HomeOutlined,
   StarOutlined,
   MessageOutlined,
+  FeaturedVideoOutlined,
 } from "@mui/icons-material";
+
 import {
   SettingOutlined,
   LogoutOutlined,
@@ -78,6 +80,12 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
                 </Menu.Item>
                 <Menu.Item key="diaryBlogAdmin" icon={<StarOutlined />}>
                   DiaryBlog Admin
+                </Menu.Item>
+                <Menu.Item
+                  key="digitalMarketing"
+                  icon={<FeaturedVideoOutlined />}
+                >
+                  Digital Marketing
                 </Menu.Item>
                 <Menu.Item key="typeitAdmin" icon={<MessageOutlined />}>
                   Typelt Admin
