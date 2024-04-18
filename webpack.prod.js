@@ -41,7 +41,7 @@ module.exports = (_, argv) => ({
         counter:
           "diaryblogadminui@https://diaryblogadminui-9lj0.onrender.com/remoteEntry.js",
         DiaryBlogSpace:
-          "diaryblogadminui@https://diaryblogadminui-9lj0.onrender.com/remoteEntry.js",
+          "diaryblogadminui@https://diaryblogadminui-144t.onrender.com/remoteEntry.js",
        // FollowSpace:
         //  "followadminui@https://followadminui.onrender.com/remoteEntry.js",
       },
