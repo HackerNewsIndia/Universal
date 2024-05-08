@@ -32,9 +32,10 @@ const Home = () => {
   const chunkedProducts = chunkArray([...products], chunkSize);
 
   return (
-   
-	
-    <div className="home_div">
+   <>
+
+
+  <div className="home_div">
       <section className="dark:bg-gray-800 dark:text-gray-100">
         <div className="container flex flex-col mx-auto lg:flex-row">
           <div
@@ -73,12 +74,14 @@ const Home = () => {
             Get a jumpstart to creating your new digital self-expression! With our fully responsive and carefully styled components, you can get the structure of your Blog, Poll, and Personal Journal done with just a couple of clicks.
           </p>
         </div>
-    <div className="container grid justify-center gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3">
+    <div className="container grid justify-center gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-2">
   {/* Similar structure for the other div elements */}
   <div className="flex flex-col px-8 py-6">
     <h2 className="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">DiaryBlog</h2>
-    <p className="flex-1 mb-4 text-base leadi dark:text-gray-400">Writing and publishing articles or posts online, sharing thoughts, opinions, and expertise on various topics to engage with an audience or community.</p>
-    <Link to="/product" className="inline-flex items-center space-x-2 text-sm dark:text-violet-400">
+    <p className="flex-1 mb-4 text-base leadi dark:text-gray-400">DiaryBlog, Newsletter, Follow, Comment, Polls, Questionnaires.</p> 
+  
+
+    <Link to="/textpage"  className="inline-flex items-center space-x-2 text-sm dark:text-violet-400">
       <span>Learn More</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
         <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -92,8 +95,8 @@ const Home = () => {
     
     
     <div class="flex flex-col px-8 py-6 lg:border-none xl:border-solid">
-			<h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Ask</h2>
-			<p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Gathering opinions or feedback from individuals through surveys or questionnaires to gauge public sentiment or make informed decisions on specific topics.</p>
+			<h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Email Marketing</h2>
+			<p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Strategy and tools for sending targeted email campaigns to subscribers, promoting products, services, or content to drive engagement and conversions. It involves creating compelling content, segmenting the audience, and analyzing performance metrics to optimize campaign effectiveness.</p>
 			<Link to="/product" className="inline-flex items-center space-x-2 text-sm dark:text-violet-400">
       <span>Learn More</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
@@ -102,8 +105,8 @@ const Home = () => {
     </Link>
 		</div>
 		<div class="flex flex-col px-8 py-6">
-			<h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">My Thoughts</h2>
-			<p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Documenting personal experiences, thoughts, and emotions in a private or public format, providing a space for reflection, self-expression, and personal growth.</p>
+			<h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Social Media Manager</h2>
+			<p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Platform or tool for managing and scheduling social media posts across multiple platforms such as Twitter, Facebook, Instagram, LinkedIn, and YouTube. It includes features for content creation, scheduling, analytics, and engagement monitoring to maintain a consistent and impactful social media presence.</p>
 			<Link to="/product" className="inline-flex items-center space-x-2 text-sm dark:text-violet-400">
       <span>Learn More</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
@@ -113,8 +116,8 @@ const Home = () => {
 		</div>
     
 		<div class="flex flex-col px-8 py-6 lg:border-none xl:border-solid">
-			<h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">TypeIt</h2>
-			<p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Pre-made building blocks that you can stack on top of each other like Legos to build a website of your own in minutes.</p>
+			<h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Business Message Manager</h2>
+			<p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Tool or platform for managing business communication channels such as live chat, messaging apps, and customer support systems. It enables businesses to efficiently handle customer inquiries, automate responses, and integrate messaging services with CRM systems for improved customer relationship management.</p>
 			<Link to="/product" className="inline-flex items-center space-x-2 text-sm dark:text-violet-400">
       <span>Learn More</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
@@ -122,7 +125,7 @@ const Home = () => {
       </svg>
     </Link>
 		</div>
-		<div class="flex flex-col px-8 py-6">
+		{/* <div class="flex flex-col px-8 py-6">
 			<h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Follow</h2>
 			<p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Full pages that showcase pieces of what you can achieve with the building blocks that are in this UI kit.</p>
 			<Link to="/product" className="inline-flex items-center space-x-2 text-sm dark:text-violet-400">
@@ -131,7 +134,7 @@ const Home = () => {
         <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
       </svg>
     </Link>
-		</div>
+		</div> */}
 		
         </div>
       </section>
@@ -162,7 +165,7 @@ const Home = () => {
      
       <Footer/>
     </div>
- 
+    </>
   );
 };
 
