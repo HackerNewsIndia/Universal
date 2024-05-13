@@ -93,9 +93,9 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
                 <Menu.Item key="followAdmin" icon={<MessageOutlined />}>
                   Follow Admin
                 </Menu.Item>
-                <Menu.Item key="help" icon={<HelpOutline />}>
+              {/*  <Menu.Item key="help" icon={<HelpOutline />}>
                   Ask Admin
-                </Menu.Item>
+                </Menu.Item> */}
                 <Menu.Item key="user" icon={<SettingOutlined />}>
                   User
                 </Menu.Item>
