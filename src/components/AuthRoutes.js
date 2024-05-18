@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Login from "./login";
+import Logout from './logout'; 
 import Register from "./Registration";
 import Dashboard from "./Dashboard";
 import ViewPosts from "./ViewPosts";
@@ -39,6 +40,10 @@ const AuthRoutes = ({ isLoggedIn, setIsLoggedIn }) => {
       <Route
         path="/login"
         element={<Login onLogin={() => setIsLoggedIn(true)} />}
+      />
+   <Route
+        path="/logout"
+        element={<Logout setIsLoggedIn={setIsLoggedIn} />} 
       />
       <Route
         path="/register"
