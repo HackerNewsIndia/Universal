@@ -25,7 +25,7 @@ function Navigation({ isLoggedIn, setIsLoggedIn }) {
   const logout = () => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
-    navigate("/");
+    navigate("/logout");
   };
 
   const handleProductClick = () => {
