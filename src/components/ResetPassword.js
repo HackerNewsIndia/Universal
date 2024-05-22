@@ -22,6 +22,17 @@ function ResetPassword({ email, onCancel }) {
     }
   };
 
+  const validatePassword = (password) => {
+    // Regex pattern to enforce:
+    // - At least one uppercase letter
+    // - At least one lowercase letter
+    // - At least one digit
+    // - At least one special character
+    // - Minimum length of 8 characters
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$%*?&])[A-Za-z\d@$%*?&]{8,}$/;
+    return regex.test(password);
+  };
+
   const handleVisibilityChange = (field) => {
     if (field === "newPassword") {
       setShowNewPassword(!showNewPassword);
@@ -33,14 +44,19 @@ function ResetPassword({ email, onCancel }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
+  
     try {
-      if (newPassword !== confirmPassword) {
-        setPasswordError("Passwords do not match.");
+      if (!validatePassword(newPassword)) {
+        setPasswordError("Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters long.");
         setLoading(false);
         return;
       }
 
+      if (newPassword!== confirmPassword) {
+        setPasswordError("Passwords do not match.");
+        setLoading(false);
+        return;
+      }
       const res = await axios.post(
         "https://usermgtapi3.onrender.com/api/reset-password",
         { email, newPassword }
