@@ -31,6 +31,10 @@ function Login({ onLogin }) {
     // Optionally clear any other state or input values here
   };
 
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -42,10 +46,23 @@ function Login({ onLogin }) {
       setEmailError("");
     }
 
-    if (name === "password" && value.length < 8) {
-      setPasswordError("Password must be at least 8 characters");
-    } else {
-      setPasswordError("");
+    if (name === "password") {
+      // Check for minimum length of 8 characters
+      if (value.length < 8) {
+        setPasswordError("Password must be at least 8 characters");
+      } else {
+        // Use regex to check for at least one uppercase letter, one lowercase letter, one digit, and one special character
+        const hasUpperCase = /[A-Z]/.test(value);
+        const hasLowerCase = /[a-z]/.test(value);
+        const hasDigit = /\d/.test(value);
+        const hasSpecialChar = /[^a-zA-Z0-9]/.test(value);
+  
+        if (!hasUpperCase ||!hasLowerCase ||!hasDigit ||!hasSpecialChar) {
+          setPasswordError("Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character.");
+        } else {
+          setPasswordError("");
+        }
+      }
     }
   };
 
@@ -203,21 +220,28 @@ function Login({ onLogin }) {
                           </a>
                         </div>
                       </div>
-                      <div className="mt-2">
-                        <input
-                          id="password"
-                          name="password"
-                          type="password"
-                          autoComplete="current-password"
-                          required
-                          onChange={handleChange}
-                          className="block w-full rounded-md border-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        />
-                        {passwordError && (
-                          <p className="mt-1 text-sm text-red-500">{passwordError}</p>
-                        )}
-                      </div>
-                    </div>
+                      <div className="relative">
+          <input
+            id="password"
+            name="password"
+            type={showPassword? "text" : "password"}
+            autoComplete="current-password"
+            required
+            onChange={handleChange}
+            className="block w-full rounded-md border-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+          <button
+            type="button"
+            onClick={toggleShowPassword}
+            className="absolute right-3 top-3 cursor-pointer"
+          >
+            {showPassword? "👁️" : "🔒"}
+          </button>
+        </div>
+        {passwordError && (
+          <p className="mt-1 text-sm text-red-500">{passwordError}</p>
+        )}
+      </div>
 
                     <div>
                       <button
