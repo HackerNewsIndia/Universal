@@ -49,7 +49,7 @@ function Login({ onLogin }) {
     if (name === "password") {
       // Check for minimum length of 8 characters
       if (value.length < 8) {
-        setPasswordError("Password must be at least 8 characters");
+        setPasswordError("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one digit, and one special character.");
       } else {
         // Use regex to check for at least one uppercase letter, one lowercase letter, one digit, and one special character
         const hasUpperCase = /[A-Z]/.test(value);
