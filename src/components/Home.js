@@ -1,11 +1,10 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Footer from "./Footer";
 import Product from "./Product";
 import Testimonials from "./Testimonials";
 import Pricing from "./Pricing";
 import Faq from "./Faq";
-import Footer from "./Footer";
-
 //import "./home.css"; // If you have additional custom styles
 
 const Home = () => {
@@ -32,7 +31,7 @@ const Home = () => {
   const chunkedProducts = chunkArray([...products], chunkSize);
 
   return (
-   <>
+<>
 
 
   <div className="home_div">
@@ -56,7 +55,7 @@ const Home = () => {
             <h2 className="text-3xl font-semibold leadi">
               Universe Modern solutions to digital self-expression
             </h2>
-            <p className="mt-4 mb-8 text-md">
+            <p className="mt-4 mb-8 text-base sm:text-lg md:text-xl  px-4 sm:px-6 md:px-8">
               Pen your Ideas! Through writing articles (blogging), gathering opinions (polling), or documenting personal experiences (journaling)
             </p>
             <button className="self-start px-10 py-3 text-lg font-medium rounded-3xl dark:bg-violet-400 dark:text-gray-900 border">
@@ -68,19 +67,24 @@ const Home = () => {
 
       <section className="m-4 md:m-8 dark:bg-gray-800 dark:text-gray-100">
         <div className="container p-4 mx-auto my-6 space-y-1 text-center">
-          <span className="text-sm font-semibold tracking uppercase dark:text-violet-400">shortcut to your dream</span>
+        <span className="text-4xl font-semibold tracking-uppercase dark:text-blue-400">Shortcut to Your Dream</span>
           <h2 className="pb-3 text-3xl font-bold md:text-4xl">Create a stylish digital self-expression in minutes</h2>
-          <p className="mt-4 mb-8 text-md">
-            Get a jumpstart to creating your new digital self-expression! With our fully responsive and carefully styled components, you can get the structure of your Blog, Poll, and Personal Journal done with just a couple of clicks.
-          </p>
+          <p className="mt-4 mb-8 text-base sm:text-lg md:text-xl  px-4 sm:px-6 md:px-8">
+  Get a jumpstart to creating your new digital self-expression! With our fully responsive and carefully styled components, you can get the structure of your Blog, Poll, and Personal Journal done with just a couple of clicks.
+</p>
+
+
         </div>
     <div className="container grid justify-center gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-2">
   {/* Similar structure for the other div elements */}
   <div className="flex flex-col px-8 py-6">
-    <h2 className="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">DiaryBlog</h2>
+    <h2 className="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Diary Blog</h2>
     <p className="flex-1 mb-4 text-base leadi dark:text-gray-400">DiaryBlog, Newsletter, Follow, Comment, Polls, Questionnaires.</p> 
-  
+    <p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Platform for writing and publishing articles or posts online, sharing thoughts, opinions, and expertise on various topics to engage with an audience or community.
+</p>
 
+    <a href="https://diaryblog.connectingpeopletech.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 mt-4 inline-block hover:underline">Visit DiaryBlog</a>
+<br />
     <Link to="/product"  className="inline-flex items-center space-x-2 text-sm dark:text-violet-400">
       <span>Learn More</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
