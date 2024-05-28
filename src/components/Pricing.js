@@ -9,7 +9,7 @@ const Pricing = () => {
       <section className="py-20 dark:bg-gray-800 dark:text-gray-100">
         <div className="container px-4 mx-auto">
           <div className="max-w-2xl mx-auto mb-16 text-center">
-            <span className="font-bold tracki uppercase dark:text-violet-400">Pricing</span>
+            <span className=" text-4xl font-bold tracki uppercase dark:text-violet-400">Pricing</span>
             <h2 className="text-4xl font-bold lg:text-5xl">Choose your best plan</h2>
           </div>
           <div className="flex flex-wrap items-stretch -mx-4">
@@ -30,28 +30,23 @@ const Pricing = () => {
 </span>
 						</li>
 						<li class="flex mb-2 space-x-2">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							<span>Email Marketing: Basic tools with limited features.
-</span>
-						</li>
-						<li class="flex mb-2 space-x-2">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							<span>Social Media Manager: Basic tools with limited capabilities.
-</span>
-						</li>
-						
-						<li class="flex mb-2 space-x-2">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							<span>Business Message Manager: Basic tools for managing business messages.
-
-</span>
-						</li>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+    </svg>
+    <span><strong>Email Marketing:</strong> Basic tools with limited features.</span>
+</li>
+<li class="flex mb-2 space-x-2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+    </svg>
+    <span><strong>Social Media Manager:</strong> Basic tools with limited capabilities.</span>
+</li>
+<li class="flex mb-2 space-x-2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+    </svg>
+    <span><strong>Business Message Manager:</strong> Basic tools for managing business messages.</span>
+</li>
 					</ul>
 					<button type="button" class="inline-block px-5 py-3 font-semibold tracki text-center rounded bg-gray-300 hover:bg-gray-400">Price : Free - 5 days</button>
 				</div>
@@ -78,21 +73,21 @@ const Pricing = () => {
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Email Marketing: Enhanced features including automation, segmentation, and analytics.
+							<span><strong>Email Marketing:</strong>  Enhanced features including automation, segmentation, and analytics.
 </span>
 						</li>
 						<li class="flex mb-2 space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Social Media Manager: Advanced features including analytics, team collaboration, and scheduled posting.
+							<span><strong>Social Media Manager:</strong>  Advanced features including analytics, team collaboration, and scheduled posting.
 </span>
 						</li>
 						<li class="flex items-center space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Business Message Manager: Advanced features including chatbots, CRM integration, and API access.
+							<span><strong>Business Message Manager:</strong> Advanced features including chatbots, CRM integration, and API access.
 </span>
 						</li>
 						{/* <li class="flex items-center space-x-2">
@@ -129,21 +124,21 @@ const Pricing = () => {
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span> Email Marketing: Custom solutions for large-scale campaigns and 24/7 support.
+							<span><strong> Email Marketing:</strong> Custom solutions for large-scale campaigns and 24/7 support.
 </span>
 						</li>
 						<li class="flex items-start space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Social Media Manager: Tailored solutions for enterprise-level social media management, brand monitoring, and compliance.
+							<span><strong> Social Media Manager:</strong> Tailored solutions for enterprise-level social media management, brand monitoring, and compliance.
 </span>
 						</li>
 						<li class="flex items-start space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-shrink-0 w-6 h-6 dark:text-violet-400">
 								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 							</svg>
-							<span>Business Message Manager: Custom solutions with advanced security features and dedicated support.
+							<span><strong>Business Message Manager:</strong> Custom solutions with advanced security features and dedicated support.
 </span>
 						</li>
 						{/* <li class="flex items-start space-x-2">
