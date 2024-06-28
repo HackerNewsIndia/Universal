@@ -29,7 +29,8 @@ function ResetPassword({ email, onCancel }) {
     // - At least one digit
     // - At least one special character
     // - Minimum length of 8 characters
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$%*?&])[A-Za-z\d@$%*?&]{8,}$/;
+    const regex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$%*?&])[A-Za-z\d@$%*?&]{8,}$/;
     return regex.test(password);
   };
 
@@ -44,21 +45,23 @@ function ResetPassword({ email, onCancel }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-  
+
     try {
       if (!validatePassword(newPassword)) {
-        setPasswordError("Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters long.");
+        setPasswordError(
+          "Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters long."
+        );
         setLoading(false);
         return;
       }
 
-      if (newPassword!== confirmPassword) {
+      if (newPassword !== confirmPassword) {
         setPasswordError("Passwords do not match.");
         setLoading(false);
         return;
       }
       const res = await axios.post(
-        "https://usermgtapi3.onrender.com/api/reset-password",
+        "https://usermgtapi-msad.onrender.com/api/reset-password",
         { email, newPassword }
       );
 
@@ -74,7 +77,6 @@ function ResetPassword({ email, onCancel }) {
     }
   };
 
-
   return (
     <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white p-6 border border-gray-300 shadow-lg rounded-md">
       {isSuccess ? (
@@ -82,18 +84,18 @@ function ResetPassword({ email, onCancel }) {
           <h2 className="mt-4 text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Password Reset Successful
           </h2>
-          <p className="mt-4 text-gray-600">Your password has been successfully reset.</p>
+          <p className="mt-4 text-gray-600">
+            Your password has been successfully reset.
+          </p>
           <button
-  onClick={onCancel} // Call the prop function onCancel
-  className="mt-6 bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded focus:outline-none focus:ring focus:ring-indigo-400"
->
-  Back to Login
-</button>
-
+            onClick={onCancel} // Call the prop function onCancel
+            className="mt-6 bg-indigo-600 hover:bg-indigo-500 text-white py-2 px-4 rounded focus:outline-none focus:ring focus:ring-indigo-400"
+          >
+            Back to Login
+          </button>
         </div>
       ) : (
         <>
-        
           <h2 className="mt-4 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Reset Password
           </h2>

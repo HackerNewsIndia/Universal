@@ -88,7 +88,7 @@ function Login({ onLogin }) {
 
     try {
       const res = await axios.post(
-        "https://usermgtapi3.onrender.com/api/login",
+        "https://usermgtapi-msad.onrender.com/api/login",
         // "http://127.0.0.1:5000/api/login",
         credentials
       );
@@ -129,7 +129,7 @@ function Login({ onLogin }) {
 
     try {
       const res = await axios.post(
-        "https://usermgtapi3.onrender.com/api/forgot-password",
+        "https://usermgtapi-msad.onrender.com/api/forgot-password",
         { email: credentials.email }
       );
 
@@ -152,7 +152,7 @@ function Login({ onLogin }) {
 
     try {
       const res = await axios.post(
-        "https://usermgtapi3.onrender.com/api/verify-otp",
+        "https://usermgtapi-msad.onrender.com/api/verify-otp",
         { email: credentials.email, otp }
       );
 

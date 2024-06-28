@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 
-
 const ImageUploader = ({ onImageUpload }) => {
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
@@ -105,7 +104,7 @@ const User = () => {
       };
 
       const response = await axios.post(
-        "https://usermgtapi3.onrender.com/api/update_user",
+        "https://usermgtapi-msad.onrender.com/api/update_user",
         userData,
         {
           headers: {
@@ -222,7 +221,7 @@ const User = () => {
               {user.image && (
                 <div className="mt-4 ">
                   <img
-                    src={`https://usermgtapi3.onrender.com/${user.image}`}
+                    src={`https://usermgtapi-msad.onrender.com/${user.image}`}
                     alt="User"
                     className="w-full h-auto"
                   />

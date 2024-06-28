@@ -25,9 +25,11 @@ function Register({ onRegister, setUser: setGlobalUser }) {
     if (!/\S+@\S+\.\S+/.test(user.email))
       validationErrors.email = "Invalid email.";
 
-    const passwordValidationRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const passwordValidationRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordValidationRegex.test(user.password)) {
-      validationErrors.password = "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.";
+      validationErrors.password =
+        "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.";
     }
 
     return validationErrors;
@@ -54,7 +56,7 @@ function Register({ onRegister, setUser: setGlobalUser }) {
 
     try {
       const res = await axios.post(
-        "https://usermgtapi3.onrender.com/api/register",
+        "https://usermgtapi-msad.onrender.com/api/register",
         user
       );
       console.log(res);
@@ -79,7 +81,7 @@ function Register({ onRegister, setUser: setGlobalUser }) {
       const token = localStorage.getItem("token");
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       const res = await axios.post(
-        "https://usermgtapi3.onrender.com/api/verify-email",
+        "https://usermgtapi-msad.onrender.com/api/verify-email",
         { email: user.email, code: verificationCode }
       );
 
@@ -158,7 +160,8 @@ function Register({ onRegister, setUser: setGlobalUser }) {
                 onClick={toggleShowPassword} // Toggle password visibility
                 className="absolute right-3 top-3 cursor-pointer"
               >
-                {showPassword ? "👁️" : "🔒"} {/* Conditionally display eye or lock icon */}
+                {showPassword ? "👁️" : "🔒"}{" "}
+                {/* Conditionally display eye or lock icon */}
               </button>
             </div>
             <button
