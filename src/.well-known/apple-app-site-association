@@ -1,0 +1,17 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+          {
+            "appIDs": ["HS9JK7JZL9.com.maniyamgt.cdblaunch.demo.parent.ManiyamgtLaunchParent"],
+            "paths": ["launch-openaccount/*","/appclip/*", "/universal-link/*"]
+          }
+        ]
+      },
+    "appclips": {
+        "apps": [
+           
+            "HS9JK7JZL9.com.maniyamgt.cdblaunch.demo.parent.ManiyamgtLaunchParent.Clip"
+        ]
+    }
+}

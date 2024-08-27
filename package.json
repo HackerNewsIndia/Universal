@@ -2,7 +2,8 @@
   "name": "universal",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && npm run copy-well-known",
+    "copy-well-known": "copyfiles -u 1 src/.well-known/** dist",
     "build:prod": "webpack --config webpack.prod.js",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=8080 npx serve",
@@ -21,6 +22,7 @@
     "@babel/preset-react": "^7.14.5",
     "autoprefixer": "^10.4.17",
     "babel-loader": "^8.2.2",
+    "copyfiles": "^2.4.1",
     "css-loader": "^6.3.0",
     "html-webpack-plugin": "^5.3.2",
     "json-loader": "^0.5.7",
