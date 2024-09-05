@@ -87,9 +87,9 @@ const Dashboard = ({ onLogout, user, isLoggedIn }) => {
                 >
                   Digital Marketing
                 </Menu.Item>
-                <Menu.Item key="typeitAdmin" icon={<MessageOutlined />}>
+               {/* <Menu.Item key="typeitAdmin" icon={<MessageOutlined />}>
                   Typelt Admin
-                </Menu.Item>
+                </Menu.Item> */}
                 <Menu.Item key="followAdmin" icon={<MessageOutlined />}>
                   Follow Admin
                 </Menu.Item>
