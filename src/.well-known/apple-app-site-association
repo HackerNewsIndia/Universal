@@ -3,7 +3,7 @@
         "apps": [],
         "details": [
           {
-            "appIDs": ["HS9JK7JZL9.com.maniyamgt.cdblaunch.demo.parent.ManiyamgtLaunchParent"],
+            "appIDs": ["HS9JK7JZL9.com.cdblaunch.demo.parent"],
             "paths": ["launch-openaccount/*","/appclip/*", "/universal-link/*"]
           }
         ]
@@ -11,7 +11,7 @@
     "appclips": {
         "apps": [
            
-            "HS9JK7JZL9.com.maniyamgt.cdblaunch.demo.parent.ManiyamgtLaunchParent.Clip"
+            "HS9JK7JZL9.com.cdblaunch.demo.parent.Clip"
         ]
     }
 }
