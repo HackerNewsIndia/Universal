@@ -87,10 +87,22 @@ function Login({ onLogin }) {
     setLoading(true);
 
     try {
+      // Hash the password using bcryptjs before sending to the server
+      // const saltRounds = 12;
+      // const hashedPassword = await bcrypt.hash(
+      //   credentials.password,
+      //   saltRounds
+      // );
+
+      const encodedPassword = btoa(credentials.password);
+
       const res = await axios.post(
         "https://usermgtapi-msad.onrender.com/api/login",
         // "http://127.0.0.1:5000/api/login",
-        credentials
+        {
+          email: credentials.email,
+          password: encodedPassword,
+        }
       );
 
       if (res.data.token) {
